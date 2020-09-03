@@ -1,0 +1,15 @@
+{
+  "application.js": "/packs/js/application-b42fbe4551a6b5d5781c.js",
+  "application.js.map": "/packs/js/application-b42fbe4551a6b5d5781c.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-b42fbe4551a6b5d5781c.js"
+      ],
+      "js.map": [
+        "/packs/js/application-b42fbe4551a6b5d5781c.js.map"
+      ]
+    }
+  },
+  "media/images/icons/checkmark.svg": "/packs/media/images/icons/checkmark-be77d22f657e4b9eb30112031e480eaa.svg"
+}
