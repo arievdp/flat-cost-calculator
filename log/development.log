@@ -13477,3 +13477,182 @@ Processing by TransactionsController#index as HTML
 Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.4ms | Allocations: 7436)
 
 
+Started GET "/flats/1" for ::1 at 2020-09-05 08:55:24 +1200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:37:in `set_flat'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:38:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:13
+  Rendered shared/_flatmate-card.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered shared/_flatmate-card.html.erb (Duration: 0.0ms | Allocations: 17)
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:48
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_transaction-card.html.erb:5
+  Rendered shared/_transaction-card.html.erb (Duration: 2.3ms | Allocations: 1904)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_transaction-card.html.erb:5
+  Rendered shared/_transaction-card.html.erb (Duration: 1.1ms | Allocations: 900)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_transaction-card.html.erb:5
+  Rendered shared/_transaction-card.html.erb (Duration: 0.8ms | Allocations: 778)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_transaction-card.html.erb:5
+  Rendered shared/_transaction-card.html.erb (Duration: 0.7ms | Allocations: 777)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_transaction-card.html.erb:5
+  Rendered shared/_transaction-card.html.erb (Duration: 0.8ms | Allocations: 777)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_transaction-card.html.erb:5
+  Rendered shared/_transaction-card.html.erb (Duration: 0.7ms | Allocations: 777)
+  Rendered flats/show.html.erb within layouts/application (Duration: 80.7ms | Allocations: 23134)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 12.2ms | Allocations: 6209)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 529)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 120)
+Completed 200 OK in 161ms (Views: 96.6ms | ActiveRecord: 13.0ms | Allocations: 52041)
+
+
+Started GET "/" for ::1 at 2020-09-05 09:45:30 +1200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:8
+  Rendered home/index.html.erb within layouts/application (Duration: 38.8ms | Allocations: 12663)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 19.8ms | Allocations: 6260)
+  Rendered shared/_flash_notice.html.erb (Duration: 1.1ms | Allocations: 215)
+  Rendered shared/_header.html.erb (Duration: 1.1ms | Allocations: 521)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 120)
+Completed 200 OK in 76ms (Views: 62.3ms | ActiveRecord: 5.4ms | Allocations: 23804)
+
+
+Started GET "/" for ::1 at 2020-09-05 09:53:57 +1200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:8
+  Rendered home/index.html.erb within layouts/application (Duration: 33.4ms | Allocations: 12663)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 19.2ms | Allocations: 6260)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 215)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 521)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 120)
+Completed 200 OK in 67ms (Views: 57.1ms | ActiveRecord: 3.9ms | Allocations: 23806)
+
+
+Started GET "/flats" for ::1 at 2020-09-05 09:54:04 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.4ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 2]]
+  ↳ app/views/shared/_flat-card.html.erb:16
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 2]]
+  ↳ app/views/shared/_flat-card.html.erb:21
+  Rendered shared/_flat-card.html.erb (Duration: 14.8ms | Allocations: 9931)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 4]]
+  ↳ app/views/shared/_flat-card.html.erb:16
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 4]]
+  ↳ app/views/shared/_flat-card.html.erb:21
+  Rendered shared/_flat-card.html.erb (Duration: 2.7ms | Allocations: 1901)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/shared/_flat-card.html.erb:16
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/shared/_flat-card.html.erb:21
+  Rendered shared/_flat-card.html.erb (Duration: 2.6ms | Allocations: 1901)
+  Rendered flats/index.html.erb within layouts/application (Duration: 47.2ms | Allocations: 18296)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3482)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1177)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 63ms (Views: 48.4ms | ActiveRecord: 6.8ms | Allocations: 26286)
+
+
+Started GET "/flats" for ::1 at 2020-09-05 09:55:41 +1200
+  
+SyntaxError (/Users/NORIE/code/arievdp/flat-cost-calculator/app/controllers/flats_controller.rb:5: syntax error, unexpected ')'
+...   @flats = Flat.where(users: )
+...                              ^):
+  
+app/controllers/flats_controller.rb:5: syntax error, unexpected ')'
+app/controllers/flats_controller.rb:5: syntax error, unexpected ')'
+app/controllers/flats_controller.rb:5: syntax error, unexpected ')'
+Started PUT "/__web_console/repl_sessions/f5d29e698c0dbf6d76249002f9181786" for ::1 at 2020-09-05 09:55:49 +1200
+Started PUT "/__web_console/repl_sessions/f5d29e698c0dbf6d76249002f9181786" for ::1 at 2020-09-05 09:55:50 +1200
+Started PUT "/__web_console/repl_sessions/f5d29e698c0dbf6d76249002f9181786" for ::1 at 2020-09-05 09:56:47 +1200
+Started PUT "/__web_console/repl_sessions/f5d29e698c0dbf6d76249002f9181786" for ::1 at 2020-09-05 09:57:23 +1200
+Started PUT "/__web_console/repl_sessions/f5d29e698c0dbf6d76249002f9181786" for ::1 at 2020-09-05 09:57:32 +1200
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" IN ($1, $2)[0m  [["id", nil], ["id", nil]]
+Started PUT "/__web_console/repl_sessions/f5d29e698c0dbf6d76249002f9181786" for ::1 at 2020-09-05 09:57:51 +1200
+Started PUT "/__web_console/repl_sessions/f5d29e698c0dbf6d76249002f9181786" for ::1 at 2020-09-05 09:58:47 +1200
+Started PUT "/__web_console/repl_sessions/f5d29e698c0dbf6d76249002f9181786" for ::1 at 2020-09-05 09:58:51 +1200
+Started GET "/" for ::1 at 2020-09-05 09:59:01 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:8
+  Rendered home/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 11098)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.2ms | Allocations: 3556)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 202)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 2.3ms | Allocations: 16609)
+
+
+Started GET "/flats" for ::1 at 2020-09-05 09:59:06 +1200
+  
+SyntaxError (/Users/NORIE/code/arievdp/flat-cost-calculator/app/controllers/flats_controller.rb:5: syntax error, unexpected ')'
+...   @flats = Flat.where(users: )
+...                              ^):
+  
+app/controllers/flats_controller.rb:5: syntax error, unexpected ')'
+app/controllers/flats_controller.rb:5: syntax error, unexpected ')'
+app/controllers/flats_controller.rb:5: syntax error, unexpected ')'
+Started PUT "/__web_console/repl_sessions/89215a29915e9c6c0c6aeb9f8f5722c1" for ::1 at 2020-09-05 09:59:08 +1200
+Started PUT "/__web_console/repl_sessions/89215a29915e9c6c0c6aeb9f8f5722c1" for ::1 at 2020-09-05 09:59:10 +1200
+Started GET "/flats" for ::1 at 2020-09-05 09:59:27 +1200
+Processing by FlatsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3117)
+
+
+  
+RuntimeError ():
+  
+app/controllers/flats_controller.rb:6:in `index'
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 09:59:34 +1200
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 09:59:35 +1200
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Flat Load (0.0ms)[0m  [1m[34mSELECT "flats".* FROM "flats" LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 09:59:38 +1200
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:6:in `index'
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 09:59:43 +1200
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 10:01:25 +1200
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 10:01:38 +1200
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 10:01:46 +1200
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 10:02:01 +1200
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 10:02:11 +1200
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 10:03:53 +1200
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 10:04:02 +1200
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 10:04:04 +1200
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 10:04:09 +1200
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 10:04:10 +1200
+  [1m[36mFlat Load (2.1ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE (flat.user_id !=2) LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 10:04:23 +1200
+  [1m[36mFlat Load (1.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE (flats.user_id !=2) LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/9022c15709867c1c06c0833ddef96279" for ::1 at 2020-09-05 10:04:32 +1200
+  [1m[36mFlat Load (1.0ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE (flats.user !=2) LIMIT $1[0m  [["LIMIT", 11]]

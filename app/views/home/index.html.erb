@@ -6,7 +6,7 @@
       <p class="mb-8 leading-relaxed">A bill splitting app for organising your house expenses between your flatmates! Built in 24 hours with Ruby on Rails, Devise, OmniAuth, SimpleForm, Tailwind CSS.</p>
       <div class="flex justify-center">
         <% if user_signed_in? %>
-          <%= link_to "View Flats", flats_path, class: "inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" %>
+          <%= link_to "My Flats", flats_path, class: "inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg" %>
         <% else %>
           <%= link_to "Login", new_user_session_path, class:"inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" %>
