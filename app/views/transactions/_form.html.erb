@@ -1,6 +1,6 @@
 <%= simple_form_for(transaction) do |f| %>
   <%= f.input :title %>
   <%= f.input :amount %>
-  <%= f.association :flat, as: :select %>
+  <%= f.input :flat_id, as: :hidden, input_html: { value: params[:flat_id] } %>
   <%= f.submit %>
 <% end %>

@@ -14,9 +14,9 @@ class TransactionsController < ApplicationController
   def create
     @transaction = Transaction.new(transaction_params)
     @transaction.user = current_user
-    @transaction.flat = Flat.find_by(transaction_params[:flat])
+    @transaction.flat = Flat.find(transaction_params[:flat_id])
     @transaction.save!
-    redirect_to transactions_path
+    redirect_to flat_path(transaction_params[:flat_id])
   end
 
   def edit; end
