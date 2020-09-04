@@ -3,7 +3,6 @@ class FlatsController < ApplicationController
 
   def index
     @flats = Flat.all
-    raise
   end
 
   def show; end
