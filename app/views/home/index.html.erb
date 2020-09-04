@@ -1,2 +1,7 @@
-<h1 class="text-2xl semibold">Welcome to Kickoff Tailwind!</h1>
-<p class="lead">Use this starting point as a way to quickly set up a new project by generating files, installing gems, and more.</p>
+<h1 class="text-2xl semibold">Welcome to Flat Cost Calculator!</h1>
+
+<% unless current_user %>
+<%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+<% else %>
+<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<% end %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<h2>Name: <%= @flat.title %></h2>
+<h2>Address: <%= @flat.address %></h2>
+<br>
+<h2>Flatmates:</h2>
+<ul>
+<% @flat.users.each do |user| %>
+  <p><%= user.name %> | <%= user.email %></p>
+<% end %>
+</ul>
+<br>
+<h2>Transactions:</h2>
+<ul>
+<% @flat.transactions.each do |t| %>
+  <p><%= t.title %> | <%= t.amount %></p>
+<% end %>
+</ul>
+<br>
+<%= link_to 'Edit', edit_flat_path(@flat) %> |
+<%= link_to 'Back', flats_path %>

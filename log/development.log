@@ -80,3 +80,2286 @@ Entrypoint application = js/application-b42fbe4551a6b5d5781c.js js/application-b
 Completed 200 OK in 8672ms (Views: 8663.1ms | ActiveRecord: 0.0ms | Allocations: 22375)
 
 
+Started GET "/" for ::1 at 2020-09-03 22:31:58 +1200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 263)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 7.9ms | Allocations: 5342)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 215)
+  Rendered shared/_header.html.erb (Duration: 2.2ms | Allocations: 526)
+Completed 200 OK in 22ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 10120)
+
+
+Started GET "/" for ::1 at 2020-09-03 22:32:05 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3551)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 202)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4531)
+
+
+Started GET "/" for ::1 at 2020-09-03 22:32:35 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 11.3ms | Allocations: 3801)
+  Rendered shared/_flash_notice.html.erb (Duration: 1.4ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 471)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 6702)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5760996406130799330)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddOmniauthToUsers (20200903105250)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "provider" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "uid" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "image" text[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200903105250"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5760996406130799330)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-09-03 23:06:08 +1200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1915)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 4845)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1 class="text-2xl semibold">Welcome to Flat Cost Calculator!</h1>
+
+<% unless current_user %>
+<%= link_to “Sign in with Facebook”, user_facebook_omniauth_authorize_path %>
+<% else %>
+<%= link_to “Logout”, destroy_user_session_path, method: :delete %>
+<% end %>
+
+):
+1:    <h1 class="text-2xl semibold">Welcome to Flat Cost Calculator!</h1>
+2:    
+3:    <% unless current_user %>
+4:    <%= link_to “Sign in with Facebook”, user_facebook_omniauth_authorize_path %>
+5:    <% else %>
+6:    <%= link_to “Logout”, destroy_user_session_path, method: :delete %>
+7:    <% end %>
+  
+app/views/home/index.html.erb:4: syntax error, unexpected in, expecting ')'
+app/views/home/index.html.erb:4: syntax error, unexpected in, expecting ')'
+app/views/home/index.html.erb:4: syntax error, unexpected in, expecting ')'
+app/views/home/index.html.erb:4: syntax error, unexpected in, expecting ')'
+app/views/home/index.html.erb:4: syntax error, unexpected in, expecting ')'
+app/views/home/index.html.erb:4: syntax error, unexpected in, expecting ')'
+Started GET "/" for ::1 at 2020-09-03 23:06:42 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 16.9ms | Allocations: 5406)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.7ms | Allocations: 215)
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 439)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 8549)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:06:48 +1200
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:06:49 +1200
+Started GET "/auth/facebook/callback?code=AQC-edZLtY6BzUNU1L4SUSgju6zJiROt08Cu3mGUMSXJbTLtj5_Q2CgmnSWGSpeNHE-Hxig1lwdjqXmdwv4ElDcjkdd79J4KawkJ8gg2dwGFGccJvE-UAHQtSe_YwjK4CUexdIVBqSzlI1UtguHysJMC0Y-YbIljNf4W-rDUsGrVm0sE2cDQbyhkgdIWxP5eL8AeX5kLCckChXbYUZhaQMYxbjXCblhVnafpzEGSxB54E22zsubC1_T3JTvIM--WtOu4qxbhONgK-05mlNxoQT_Gba4NVYOrE05wkHfEHNotVK-BekFzFJCRxI6iiJ5xpAzzxXSALwo_wzLei3QtsAWS&state=94c5d04887885e6aede54e0dfa5f4fb8da951c23241b596b" for ::1 at 2020-09-03 23:06:57 +1200
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/facebook/callback?code=AQARV1qcdBSTTfZJ3Qq-d9HHBJvJKCDnVDjQP8ZQWhfqcpm8VD0k2tO6nT3A3xHw727A4PmOmqDixg3-pDeMD9TTihPvJCavZcy6wQ6oC2lOIOFN3cRCQhT3gsoq2yW0vvxwbpdLKhnKI3dfnCh85pqh-9VGGu8En7IjkV0g_MOzpxN_EWO3ihucLvPUcMOM__en2auX0GtIZcWKjxD5gK2bQSVgQkir2EpQOFKMQs0A0FmhsbMPJLgYjG8Gi7A5wOzogezwbm1ROgDQP-gWNTKbIwcc8xsONvpCpRHH_8MDYaNo7UJDLRMQ7S-wXvAGKjKqvTXZoEjGR2qVSgwbXcyd&state=94c5d04887885e6aede54e0dfa5f4fb8da951c23241b596b" for ::1 at 2020-09-03 23:08:50 +1200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:08:54 +1200
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:08:55 +1200
+Started GET "/auth/facebook/callback?code=AQAnok9TsCVvZBvF3XvL3agqjRw3bbwT2jP0RzZL957J7z2u0fNkrmrNPl7er8LHICWrxQwS3KpRg43_vjcu8dWuTQwyUFOTQwiTc4GMHBWHff8VOWbS7r9JOt77_AVJ_h1MPDMlEOZ3eTr5ToL8ZbttxiFVN5yMDA99WQXVdo_htal-qZcERwmbcp3PLjbr1SHhc8sUcyhHYcX-2oyhBIDFLrzAvLP2YLcUAIv6CVu1tO-0zHW8ptPM2q2z8HRrlORxoTxvifzkyHDu8drRM5sGRCoTMsC7mlCGIiswqq66II8U6uIMwp7o-bhSMuoAiVisiWOLFv0OYRL7Gw3YSaR_&state=2139b6822eaf5ae19a68183673e8eed72379419e163cbf75" for ::1 at 2020-09-03 23:08:55 +1200
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/facebook/callback?code=AQAnok9TsCVvZBvF3XvL3agqjRw3bbwT2jP0RzZL957J7z2u0fNkrmrNPl7er8LHICWrxQwS3KpRg43_vjcu8dWuTQwyUFOTQwiTc4GMHBWHff8VOWbS7r9JOt77_AVJ_h1MPDMlEOZ3eTr5ToL8ZbttxiFVN5yMDA99WQXVdo_htal-qZcERwmbcp3PLjbr1SHhc8sUcyhHYcX-2oyhBIDFLrzAvLP2YLcUAIv6CVu1tO-0zHW8ptPM2q2z8HRrlORxoTxvifzkyHDu8drRM5sGRCoTMsC7mlCGIiswqq66II8U6uIMwp7o-bhSMuoAiVisiWOLFv0OYRL7Gw3YSaR_&state=2139b6822eaf5ae19a68183673e8eed72379419e163cbf75" for ::1 at 2020-09-03 23:13:09 +1200
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:13:14 +1200
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:13:14 +1200
+Started GET "/auth/facebook/callback?code=AQCAGThCQ84EXdQK3ScLTdZZkUEzEi57ose0cpz5oZ3L0lUTTryfrXj7CWJNCgiczUdN_cCw46LAsdHt6VW85wXbpsU7mdc5yfxrNEO1nP2jiAzD0RYkcP-NlhSJiw1Q-zUaTrN9yNv1xMUWAbAR_RFtZ8KrqVXSujpVJx3wy4qyi6gUg9_ED3uzO5rGdKt66w4oVY4Au3v2Wxrt5UKwOjvFTQLhrBB32B5f5E66O3rJA31Ckt_7U49-a6431oO0wj6gMvt9-VxOz8eqqAWMJy3CB7kwrcWMfv30l3jxvql4hbYC2sfXiTwB2QG2Au-jsaSGZ2NTQsTamNSUnjpPt38E&state=534ad23719f044357e606e76633c19d99c2929c6fe6dd704" for ::1 at 2020-09-03 23:13:15 +1200
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-09-03 23:18:51 +1200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 422)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 15.2ms | Allocations: 5351)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.6ms | Allocations: 215)
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 439)
+Completed 200 OK in 33ms (Views: 25.6ms | ActiveRecord: 0.0ms | Allocations: 10222)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:18:53 +1200
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:18:53 +1200
+Started GET "/auth/facebook/callback?code=AQDQxMp5NnhrwtM3TwHXQq6OFTREmRNhhTN4PgduBVRIhmUCjIlONf68wBL45zFX-TvTUutWrdm9TtDu6CvMXlvQsH29G8FMaF62dAJNU8nc3ZDALmrtLzQXzc7sL6_BKGaTFuufyFE-wJzYbUq6H23z9q9SbcJmjlw-XNGRrFC__eK-N3qhdUvphAaIpgQq2GdlVvYNfAHtBXCQ6QhQNQv5IzR6Y7Lvgrh6PQJeflPX0a8oWHg5ljKduJl_pZ9L4lSPSGIlmM7LOgf8WXRrM94v98aHgI2inMFQHEUpjlZJ3QU6oiWGTQlmOxqwSr2Gc8Rt5csqTun7B98EYJhRkF31&state=2995c15546254b4a3a621be24bd5d9490ee9e86f0b3f5fbd" for ::1 at 2020-09-03 23:18:54 +1200
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:22:41 +1200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:22:42 +1200
+Started GET "/auth/facebook/callback?code=AQDjTxUGlmqhU7gpOppnYcvW_kB4wzFEGZzsb15hZQVgY9vUsiWghueVYtPqWLDpPMN1MGfYdYr9ckcoRLE-vngsICb3G_uod-atGpk_hZ2xdZHYeM7OPHHrh9KzU-URDgPgjeUuzv0O1UfB8O5JfnZ2nVc-i66WI2PNgG57xhsUYQe7RZs2NVT7QWfC64_Uzgfys-PxaRXzVmxUfGrUDmzdWODwVzPF-YuNYhnu_-mUcsHUSoSSqcRUN0PpEpGEHbkt4BtmiDOflWRJIl4mEmc7OHc8rzVkE0LgCYkV7FMEDWpvGWgYh0HLTrCEUKM5iC4gw21U69P7GUbANhuLV7O8&state=0b7a7dbf6d6bcbaac0243cb6fda4183af6b1782a63405462" for ::1 at 2020-09-03 23:22:42 +1200
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:25:47 +1200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:25:48 +1200
+Started GET "/users/auth/facebook/callback?code=AQAXmFtez8utGFGww43YHUJiMpzsajBqe8LIjRXYnh6M27i5cxMnmlzbS8nouN0ZppqvfB0-vIVQhtglkXsX9tBSxaPrfZ4z1oQtyvqpmmxuHceIzxRptwpokdQwXUNv377MId1wIiP6bt1qCMDR4d7Qf67hmQl74Na0oPE4MAF7WZCsBatuTTbpvfGZPGbWuL8n6VG-Tt6F9pvaKNOoW3iYYHkfIqG-EW9MV5XmxtMau6drhP-mK-Cn19q6HsnYya0RqkU1FkQdNuaeExjmZ0ffNz8IMggGSU4qSooNd17WYyYoTAmYknI1EkcDXnO1k0Yl-PGLL7oQkJk0FEhYiCvG&state=973ed7522415dd6a26eb40a4883721c71711d233d4a717b5" for ::1 at 2020-09-03 23:25:48 +1200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAXmFtez8utGFGww43YHUJiMpzsajBqe8LIjRXYnh6M27i5cxMnmlzbS8nouN0ZppqvfB0-vIVQhtglkXsX9tBSxaPrfZ4z1oQtyvqpmmxuHceIzxRptwpokdQwXUNv377MId1wIiP6bt1qCMDR4d7Qf67hmQl74Na0oPE4MAF7WZCsBatuTTbpvfGZPGbWuL8n6VG-Tt6F9pvaKNOoW3iYYHkfIqG-EW9MV5XmxtMau6drhP-mK-Cn19q6HsnYya0RqkU1FkQdNuaeExjmZ0ffNz8IMggGSU4qSooNd17WYyYoTAmYknI1EkcDXnO1k0Yl-PGLL7oQkJk0FEhYiCvG", "state"=>"973ed7522415dd6a26eb40a4883721c71711d233d4a717b5"}
+  [1m[36mUser Load (24.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "10158410573071259"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:19:in `from_omniauth'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:19:in `from_omniauth'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "arie.theodorus.vanderpoel@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:19:in `from_omniauth'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "created_at", "updated_at", "provider", "uid", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "arie.theodorus.vanderpoel@gmail.com"], ["encrypted_password", "$2a$12$KC8LtVsvzHuPUsYLyAm8RukgeqzWVRQbUIxW9KREEY3RiUWNSt0Je"], ["first_name", "Arie"], ["last_name", "Van Der Poel"], ["created_at", "2020-09-03 11:25:50.039066"], ["updated_at", "2020-09-03 11:25:50.039066"], ["provider", "facebook"], ["uid", "10158410573071259"], ["image", "http://graph.facebook.com/v4.0/10158410573071259/picture"]]
+  ↳ app/models/user.rb:19:in `from_omniauth'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:19:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 327ms (ActiveRecord: 37.4ms | Allocations: 23406)
+
+
+Started GET "/" for ::1 at 2020-09-03 23:25:50 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1300)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 13.3ms | Allocations: 5354)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.7ms | Allocations: 216)
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 417)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.3ms | Allocations: 10210)
+
+
+Started GET "/users/edit" for ::1 at 2020-09-03 23:25:57 +1200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 206)
+  Rendered devise/shared/_form_wrap.html.erb (Duration: 0.5ms | Allocations: 110)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 11.9ms | Allocations: 4629)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.9ms | Allocations: 3518)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 136)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.4ms | Allocations: 11821)
+
+
+Started GET "/" for ::1 at 2020-09-03 23:26:09 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1027)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 11.0ms | Allocations: 3568)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 131)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.6ms | Allocations: 5500)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-09-03 23:26:12 +1200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iIyUlz7BGFh4GhYVa8M788bIHfOJ4vbzFvOfVXBwp4dCEAfRU+qjKKBPKFbqsdzo/63PJ/W0YBrLCTxpOmPjWA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms | Allocations: 3105)
+
+
+Started GET "/" for ::1 at 2020-09-03 23:26:12 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 8.7ms | Allocations: 3566)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 153)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 4627)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:26:14 +1200
+Started GET "/users/auth/facebook" for ::1 at 2020-09-03 23:26:14 +1200
+Started GET "/users/auth/facebook/callback?code=AQA-UEZGH0vEJ4Bdc7HDcaJy_e_bzXEkAKl7zBZckzCsC6PcU3Yv6Dwdaf9xenlR39RkbyN35xRPY07TCtTuSGbZOZLCQez308Ccun-zCYSLwDM5FkGwCSmUqYVjOeBMkAGaLM5xGk3mF2_oKNnJc0GilXyb8c2wQHD8B2ZsPLZJqBG5Dan76bTwX9MOvbD2ZKFpngBCRoLEv1LkSDd9eUsruOU6NLt5PQJMIchPfCgiz_VJBHKadBQLZtDj9JrOUujf6nfClYud-FMHpR3WJVG5irVyj4wRjtHwRzvDEi7ugqRy9hHU6EWRb4QsqNQXcs9NzLe62T5N3IqrMKTA0AdC&state=cfae503cab2de44519b8ac65038bf66a3cd669ffcdccb668" for ::1 at 2020-09-03 23:26:15 +1200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQA-UEZGH0vEJ4Bdc7HDcaJy_e_bzXEkAKl7zBZckzCsC6PcU3Yv6Dwdaf9xenlR39RkbyN35xRPY07TCtTuSGbZOZLCQez308Ccun-zCYSLwDM5FkGwCSmUqYVjOeBMkAGaLM5xGk3mF2_oKNnJc0GilXyb8c2wQHD8B2ZsPLZJqBG5Dan76bTwX9MOvbD2ZKFpngBCRoLEv1LkSDd9eUsruOU6NLt5PQJMIchPfCgiz_VJBHKadBQLZtDj9JrOUujf6nfClYud-FMHpR3WJVG5irVyj4wRjtHwRzvDEi7ugqRy9hHU6EWRb4QsqNQXcs9NzLe62T5N3IqrMKTA0AdC", "state"=>"cfae503cab2de44519b8ac65038bf66a3cd669ffcdccb668"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "10158410573071259"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:19:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 1193)
+
+
+Started GET "/" for ::1 at 2020-09-03 23:26:16 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.9ms | Allocations: 3568)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 128)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 5488)
+
+
+Started GET "/users/edit" for ::1 at 2020-09-03 23:26:23 +1200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered devise/shared/_form_wrap.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1753)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.1ms | Allocations: 3565)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 128)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.5ms | Allocations: 7832)
+
+
+Started GET "/" for ::1 at 2020-09-03 23:26:28 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 5.4ms | Allocations: 3563)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 128)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 5469)
+
+
+Started GET "/" for ::1 at 2020-09-04 09:36:55 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (12.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 10754)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 16.3ms | Allocations: 3517)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 133)
+Completed 200 OK in 53ms (Views: 36.4ms | ActiveRecord: 12.7ms | Allocations: 16068)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5760996406130799330)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFlats (20200903223857)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (25.5ms)[0m  [1m[35mCREATE TABLE "flats" ("id" bigserial primary key, "title" character varying, "address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200903223857"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGroups (20200903224536)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (26.8ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "flats_id" bigint NOT NULL, "users_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_021e6f1361"
+FOREIGN KEY ("flats_id")
+  REFERENCES "flats" ("id")
+, CONSTRAINT "fk_rails_3eb01ef369"
+FOREIGN KEY ("users_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_flats_id" ON "groups"  ("flats_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_users_id" ON "groups"  ("users_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200903224536"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5760996406130799330)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5760996406130799330)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTransactions (20200903225517)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "title" character varying, "amount" character varying, "date" timestamp, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_7dd6243fc0"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+)[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_flat_id" ON "transactions"  ("flat_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200903225517"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5760996406130799330)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$12$WxuvEOg.GtSeKlLU7TX05O0vpf3FI.Fl3YJI73gpo/aHRX.UlwL.K"], ["first_name", "User"], ["last_name", "Puser"], ["created_at", "2020-09-03 23:38:29.703489"], ["updated_at", "2020-09-03 23:38:29.703489"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFlat Create (2.1ms)[0m  [1m[32mINSERT INTO "flats" ("title", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Home sweet home"], ["address", "7/29 Sentinel road, Auckland"], ["created_at", "2020-09-03 23:38:29.715090"], ["updated_at", "2020-09-03 23:38:29.715090"]]
+  [1m[35m (9.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (21.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flat_cost_calculator_development"[0m
+  [1m[35m (19.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flat_cost_calculator_test"[0m
+  [1m[35m (162.6ms)[0m  [1m[35mCREATE DATABASE "flat_cost_calculator_development" ENCODING = 'unicode'[0m
+  [1m[35m (56.9ms)[0m  [1m[35mCREATE DATABASE "flat_cost_calculator_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "flats" CASCADE[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "flats" ("id" bigserial primary key, "title" character varying, "address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "groups" CASCADE[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "flats_id" bigint NOT NULL, "users_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_flats_id" ON "groups"  ("flats_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_users_id" ON "groups"  ("users_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "title" character varying, "amount" character varying, "date" timestamp, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_flat_id" ON "transactions"  ("flat_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "first_name" character varying, "last_name" character varying, "admin" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "provider" character varying, "uid" character varying, "name" character varying, "image" text)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_021e6f1361"
+FOREIGN KEY ("flats_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_3eb01ef369"
+FOREIGN KEY ("users_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_7dd6243fc0"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200903225517)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200903102247),
+(20200903102257),
+(20200903105250),
+(20200903223857),
+(20200903224536);
+
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-03 23:39:44.828804"], ["updated_at", "2020-09-03 23:39:44.828804"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "2242115c5490d628d6e640a6356abf7cb0c59334"], ["created_at", "2020-09-03 23:39:44.845189"], ["updated_at", "2020-09-03 23:39:44.845189"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "flats" CASCADE[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "flats" ("id" bigserial primary key, "title" character varying, "address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "groups" CASCADE[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "flats_id" bigint NOT NULL, "users_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_flats_id" ON "groups"  ("flats_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_users_id" ON "groups"  ("users_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "title" character varying, "amount" character varying, "date" timestamp, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_flat_id" ON "transactions"  ("flat_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "first_name" character varying, "last_name" character varying, "admin" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "provider" character varying, "uid" character varying, "name" character varying, "image" text)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_021e6f1361"
+FOREIGN KEY ("flats_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_3eb01ef369"
+FOREIGN KEY ("users_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_7dd6243fc0"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200903225517)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200903102247),
+(20200903102257),
+(20200903105250),
+(20200903223857),
+(20200903224536);
+
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-03 23:39:44.947782"], ["updated_at", "2020-09-03 23:39:44.947782"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-03 23:39:44.954014"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "2242115c5490d628d6e640a6356abf7cb0c59334"], ["created_at", "2020-09-03 23:39:44.959086"], ["updated_at", "2020-09-03 23:39:44.959086"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$12$vd03Oz1u2/GRowC/izNzXOblylV44v2aE3d4yOBZHraN9CNjiXnpi"], ["first_name", "User"], ["last_name", "Puser"], ["created_at", "2020-09-03 23:39:45.251836"], ["updated_at", "2020-09-03 23:39:45.251836"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFlat Create (0.4ms)[0m  [1m[32mINSERT INTO "flats" ("title", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Home sweet home"], ["address", "7/29 Sentinel road, Auckland"], ["created_at", "2020-09-03 23:39:45.263309"], ["updated_at", "2020-09-03 23:39:45.263309"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats" ORDER BY "flats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (29.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flat_cost_calculator_development"[0m
+  [1m[35m (22.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flat_cost_calculator_test"[0m
+  [1m[35m (55.6ms)[0m  [1m[35mCREATE DATABASE "flat_cost_calculator_development" ENCODING = 'unicode'[0m
+  [1m[35m (52.2ms)[0m  [1m[35mCREATE DATABASE "flat_cost_calculator_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "flats" CASCADE[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "flats" ("id" bigserial primary key, "title" character varying, "address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "groups" CASCADE[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "flats_id" bigint NOT NULL, "users_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_flats_id" ON "groups"  ("flats_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_users_id" ON "groups"  ("users_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "title" character varying, "amount" character varying, "date" timestamp, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_flat_id" ON "transactions"  ("flat_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "first_name" character varying, "last_name" character varying, "admin" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "provider" character varying, "uid" character varying, "name" character varying, "image" text)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_021e6f1361"
+FOREIGN KEY ("flats_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_3eb01ef369"
+FOREIGN KEY ("users_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_7dd6243fc0"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200903225517)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200903102247),
+(20200903102257),
+(20200903105250),
+(20200903223857),
+(20200903224536);
+
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-03 23:42:12.250946"], ["updated_at", "2020-09-03 23:42:12.250946"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "2242115c5490d628d6e640a6356abf7cb0c59334"], ["created_at", "2020-09-03 23:42:12.271403"], ["updated_at", "2020-09-03 23:42:12.271403"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "flats" CASCADE[0m
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "flats" ("id" bigserial primary key, "title" character varying, "address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "groups" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "flats_id" bigint NOT NULL, "users_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_flats_id" ON "groups"  ("flats_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_users_id" ON "groups"  ("users_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "title" character varying, "amount" character varying, "date" timestamp, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_flat_id" ON "transactions"  ("flat_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "first_name" character varying, "last_name" character varying, "admin" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "provider" character varying, "uid" character varying, "name" character varying, "image" text)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_021e6f1361"
+FOREIGN KEY ("flats_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_3eb01ef369"
+FOREIGN KEY ("users_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_7dd6243fc0"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200903225517)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200903102247),
+(20200903102257),
+(20200903105250),
+(20200903223857),
+(20200903224536);
+
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-03 23:42:12.404435"], ["updated_at", "2020-09-03 23:42:12.404435"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-03 23:42:12.409839"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "2242115c5490d628d6e640a6356abf7cb0c59334"], ["created_at", "2020-09-03 23:42:12.415025"], ["updated_at", "2020-09-03 23:42:12.415025"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$12$xXb8n4.4Qt2uY0nWEivS7eluMVJSCAvB3l7vqnm85dYVR8hMscP.i"], ["first_name", "User"], ["last_name", "Puser"], ["created_at", "2020-09-03 23:42:12.702868"], ["updated_at", "2020-09-03 23:42:12.702868"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFlat Create (1.1ms)[0m  [1m[32mINSERT INTO "flats" ("title", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Home sweet home"], ["address", "7/29 Sentinel road, Auckland"], ["created_at", "2020-09-03 23:42:12.716383"], ["updated_at", "2020-09-03 23:42:12.716383"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" ORDER BY "flats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5760996406130799330)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGroups (20200903234334)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_5e78cd340a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_db9cc81f43"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5760996406130799330)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (31.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flat_cost_calculator_development"[0m
+  [1m[35m (23.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flat_cost_calculator_test"[0m
+  [1m[35m (86.7ms)[0m  [1m[35mCREATE DATABASE "flat_cost_calculator_development" ENCODING = 'unicode'[0m
+  [1m[35m (52.0ms)[0m  [1m[35mCREATE DATABASE "flat_cost_calculator_test" ENCODING = 'unicode'[0m
+  [1m[35m (20.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flat_cost_calculator_development"[0m
+  [1m[35m (19.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flat_cost_calculator_test"[0m
+  [1m[35m (50.5ms)[0m  [1m[35mCREATE DATABASE "flat_cost_calculator_development" ENCODING = 'unicode'[0m
+  [1m[35m (58.9ms)[0m  [1m[35mCREATE DATABASE "flat_cost_calculator_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "flats" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "flats" ("id" bigserial primary key, "title" character varying, "address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "groups" CASCADE[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "flats_id" bigint NOT NULL, "users_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_flats_id" ON "groups"  ("flats_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_users_id" ON "groups"  ("users_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "title" character varying, "amount" character varying, "date" timestamp, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_flat_id" ON "transactions"  ("flat_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "first_name" character varying, "last_name" character varying, "admin" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "provider" character varying, "uid" character varying, "name" character varying, "image" text)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_021e6f1361"
+FOREIGN KEY ("flats_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_3eb01ef369"
+FOREIGN KEY ("users_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_7dd6243fc0"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200903225517)[0m
+  [1m[35m (5.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200903102247),
+(20200903102257),
+(20200903105250),
+(20200903223857);
+
+[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-03 23:44:12.041225"], ["updated_at", "2020-09-03 23:44:12.041225"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "2242115c5490d628d6e640a6356abf7cb0c59334"], ["created_at", "2020-09-03 23:44:12.048139"], ["updated_at", "2020-09-03 23:44:12.048139"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "flats" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "flats" ("id" bigserial primary key, "title" character varying, "address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "groups" CASCADE[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "flats_id" bigint NOT NULL, "users_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_flats_id" ON "groups"  ("flats_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_users_id" ON "groups"  ("users_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "title" character varying, "amount" character varying, "date" timestamp, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_flat_id" ON "transactions"  ("flat_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "first_name" character varying, "last_name" character varying, "admin" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "provider" character varying, "uid" character varying, "name" character varying, "image" text)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_021e6f1361"
+FOREIGN KEY ("flats_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_3eb01ef369"
+FOREIGN KEY ("users_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_7dd6243fc0"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200903225517)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200903102247),
+(20200903102257),
+(20200903105250),
+(20200903223857);
+
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-03 23:44:12.157706"], ["updated_at", "2020-09-03 23:44:12.157706"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-03 23:44:12.163406"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "2242115c5490d628d6e640a6356abf7cb0c59334"], ["created_at", "2020-09-03 23:44:12.167845"], ["updated_at", "2020-09-03 23:44:12.167845"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5760996406130799330)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGroups (20200903234334)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_5e78cd340a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_db9cc81f43"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5760996406130799330)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5760996406130799330)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGroups (20200903234334)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_5e78cd340a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_db9cc81f43"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5760996406130799330)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (28.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flat_cost_calculator_development"[0m
+  [1m[35m (20.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flat_cost_calculator_test"[0m
+  [1m[35m (52.0ms)[0m  [1m[35mCREATE DATABASE "flat_cost_calculator_development" ENCODING = 'unicode'[0m
+  [1m[35m (78.1ms)[0m  [1m[35mCREATE DATABASE "flat_cost_calculator_test" ENCODING = 'unicode'[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5760996406130799330)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20200903102247)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "first_name" character varying, "last_name" character varying, "admin" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200903102247"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFriendlyIdSlugs (20200903102257)
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.2ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200903102257"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddOmniauthToUsers (20200903105250)
+  [1m[35m (5.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "provider" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "uid" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "image" text[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200903105250"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFlats (20200903223857)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE TABLE "flats" ("id" bigserial primary key, "title" character varying, "address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200903223857"]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTransactions (20200903225517)
+  [1m[35m (5.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.1ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "title" character varying, "amount" character varying, "date" timestamp, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_7dd6243fc0"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_flat_id" ON "transactions"  ("flat_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200903225517"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGroups (20200903234334)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_5e78cd340a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_db9cc81f43"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_user_id" ON "groups"  ("user_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_flat_id" ON "groups"  ("flat_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200903234334"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-03 23:46:17.635753"], ["updated_at", "2020-09-03 23:46:17.635753"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5760996406130799330)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$12$s.YraNfEW7INc89c0mYJmeBVx867xxhlxYTkkgQc.AAgpMv2fg5WW"], ["first_name", "User"], ["last_name", "Puser"], ["created_at", "2020-09-03 23:46:35.880248"], ["updated_at", "2020-09-03 23:46:35.880248"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFlat Create (0.4ms)[0m  [1m[32mINSERT INTO "flats" ("title", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Home sweet home"], ["address", "7/29 Sentinel road, Auckland"], ["created_at", "2020-09-03 23:46:35.891635"], ["updated_at", "2020-09-03 23:46:35.891635"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" ORDER BY "flats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" ORDER BY "flats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-09-04 11:59:21 +1200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (Duration: 35.6ms | Allocations: 12464)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 70.3ms | Allocations: 13856)
+  Rendered shared/_flash_notice.html.erb (Duration: 1.7ms | Allocations: 215)
+  Rendered shared/_header.html.erb (Duration: 1.8ms | Allocations: 439)
+Completed 200 OK in 125ms (Views: 112.6ms | ActiveRecord: 4.2ms | Allocations: 30761)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-09-04 11:59:24 +1200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 771)
+  Rendered devise/shared/_form_wrap.html.erb (Duration: 0.5ms | Allocations: 110)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.9ms | Allocations: 5651)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3580)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 176)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 11741)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-09-04 11:59:27 +1200
+Started GET "/users/auth/facebook" for ::1 at 2020-09-04 11:59:27 +1200
+Started GET "/users/auth/facebook" for ::1 at 2020-09-04 11:59:27 +1200
+Started GET "/users/auth/facebook/callback?code=AQDuRatJ3F3chGfQb_D8DGExQV9LoK2NfEhhBKUGRIaY86j6-5_GGvQ06_ka-qPIHNTBkbzgLfPMP3BJXEakIJxwOcR711_Y8VTlg_J42jDXSgmz_GgVU4CbJrpxJE58nRjSGrrKRC_6WNNHCsapeGdeL5fSFJS7QLTm8qUxRYW2UYZczQ6S-SEiDod3YvotGKM5ijXV5nRRqRTT75iX3VdQdLkqz0XlE9sIv1GVOx4vsak5lcMieSX4qKHpqdJwiHhw91iQHfWBOYpUVLRogu1YuNvDrsiOBWMl3F4RB4nF3Bo5aT7TvCmOR3_MRlR1pEcf1g1XL3ASzr7bQOCZwfBf&state=4696793854895d52ab9d27e9be6804c6f555e4ca444b53d9" for ::1 at 2020-09-04 11:59:28 +1200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDuRatJ3F3chGfQb_D8DGExQV9LoK2NfEhhBKUGRIaY86j6-5_GGvQ06_ka-qPIHNTBkbzgLfPMP3BJXEakIJxwOcR711_Y8VTlg_J42jDXSgmz_GgVU4CbJrpxJE58nRjSGrrKRC_6WNNHCsapeGdeL5fSFJS7QLTm8qUxRYW2UYZczQ6S-SEiDod3YvotGKM5ijXV5nRRqRTT75iX3VdQdLkqz0XlE9sIv1GVOx4vsak5lcMieSX4qKHpqdJwiHhw91iQHfWBOYpUVLRogu1YuNvDrsiOBWMl3F4RB4nF3Bo5aT7TvCmOR3_MRlR1pEcf1g1XL3ASzr7bQOCZwfBf", "state"=>"4696793854895d52ab9d27e9be6804c6f555e4ca444b53d9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "10158410573071259"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21:in `from_omniauth'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:21:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "arie.theodorus.vanderpoel@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21:in `from_omniauth'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "created_at", "updated_at", "provider", "uid", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "arie.theodorus.vanderpoel@gmail.com"], ["encrypted_password", "$2a$12$.H0y0VdzVWykmioypdfsOumIadQIcKUnCs3gierBtuhmxYsHuHMLa"], ["first_name", "Arie"], ["last_name", "Van Der Poel"], ["created_at", "2020-09-03 23:59:29.790147"], ["updated_at", "2020-09-03 23:59:29.790147"], ["provider", "facebook"], ["uid", "10158410573071259"], ["image", "http://graph.facebook.com/v4.0/10158410573071259/picture"]]
+  ↳ app/models/user.rb:21:in `from_omniauth'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:21:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 262ms (ActiveRecord: 2.1ms | Allocations: 6457)
+
+
+Started GET "/" for ::1 at 2020-09-04 11:59:29 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1015)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 11.8ms | Allocations: 3586)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/_header.html.erb (Duration: 1.0ms | Allocations: 132)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.3ms | Allocations: 5519)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 11:59:44 +1200
+Processing by FlatsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2568)
+
+
+  
+NameError (uninitialized constant FlatsController::Flats
+Did you mean?  Float):
+  
+app/controllers/flats_controller.rb:5:in `index'
+Started GET "/flats" for ::1 at 2020-09-04 12:00:04 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.4ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.8ms | Allocations: 3557)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 15.7ms | Allocations: 11061)
+Completed 200 OK in 35ms (Views: 25.5ms | ActiveRecord: 5.8ms | Allocations: 22642)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:00:08 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  Rendered flats/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 208)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 1.9ms | Allocations: 1104)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.4ms | Allocations: 6512)
+
+
+Started GET "/flats/1/edit" for ::1 at 2020-09-04 12:00:09 +1200
+Processing by FlatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.4ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/edit.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 1.1ms | Allocations: 673)
+  Rendered flats/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1068)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.9ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 2.2ms | Allocations: 1104)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.7ms | Allocations: 7262)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:00:17 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  Rendered flats/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 77)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 5.6ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 2.4ms | Allocations: 1103)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.6ms | Allocations: 6150)
+
+
+Started GET "/flats/1/edit" for ::1 at 2020-09-04 12:00:20 +1200
+Processing by FlatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/edit.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 0.8ms | Allocations: 363)
+  Rendered flats/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 486)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3578)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 1.4ms | Allocations: 1100)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.4ms | Allocations: 6531)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:00:21 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 820)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1103)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 6302)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 12:01:00 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1444)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3531)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 15.6ms | Allocations: 11126)
+Completed 200 OK in 27ms (Views: 19.9ms | ActiveRecord: 4.3ms | Allocations: 19216)
+
+
+Started GET "/transactions/new" for ::1 at 2020-09-04 12:01:01 +1200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/_form.html.erb (Duration: 1.2ms | Allocations: 657)
+  Rendered transactions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1000)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 1.5ms | Allocations: 1104)
+Completed 200 OK in 17ms (Views: 8.0ms | ActiveRecord: 1.8ms | Allocations: 11441)
+
+
+Started POST "/transactions" for ::1 at 2020-09-04 12:01:04 +1200
+Processing by TransactionsController#create as HTML
+  Parameters: {"authenticity_token"=>"b8sbo8W8pD2Os4O8f978ui6bWpd7uOJXRv1iVXFuRMrSLYNHIru5oXJkmB4p1vYQVf36Nxn3O0Mo2N5mR3JtuQ==", "commit"=>"Create Transaction"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 777)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: transaction):
+  
+app/controllers/transactions_controller.rb:39:in `transaction_params'
+app/controllers/transactions_controller.rb:15:in `create'
+Started GET "/transactions" for ::1 at 2020-09-04 12:01:22 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 696)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.7ms | Allocations: 3580)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 1.9ms | Allocations: 1100)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 6165)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:01:28 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.9ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1104)
+Completed 200 OK in 18ms (Views: 12.2ms | ActiveRecord: 3.0ms | Allocations: 10988)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:02:08 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 2.1ms | Allocations: 1378)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.4ms | Allocations: 8627)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:02:10 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 815)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 5.1ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 1.4ms | Allocations: 1109)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.5ms | Allocations: 6294)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:02:15 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  Rendered flats/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 204)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1113)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.4ms | Allocations: 6525)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:02:18 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 813)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 6.0ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 2.0ms | Allocations: 1109)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.5ms | Allocations: 6279)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:03:01 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.5ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:22
+  Rendered shared/_header.html.erb (Duration: 2.1ms | Allocations: 1486)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.5ms | Allocations: 8728)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:03:30 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.6ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.8ms | Allocations: 1477)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.4ms | Allocations: 8709)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 12:03:31 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 918)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.6ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.5ms | Allocations: 1176)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.4ms | Allocations: 7103)
+
+
+Started GET "/groups" for ::1 at 2020-09-04 12:03:32 +1200
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (8.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  Rendered groups/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1260)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 18.9ms | Allocations: 3534)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1178)
+Completed 200 OK in 36ms (Views: 24.2ms | ActiveRecord: 9.7ms | Allocations: 8108)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:03:33 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 819)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 5.8ms | Allocations: 3583)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 2.0ms | Allocations: 1176)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.4ms | Allocations: 6350)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 12:03:34 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 701)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.2ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1176)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.5ms | Allocations: 6243)
+
+
+Started GET "/groups" for ::1 at 2020-09-04 12:03:35 +1200
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 689)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.2ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1169)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 6211)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 12:03:35 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.1ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1169)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 6226)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:03:37 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.5ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1169)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms | Allocations: 6329)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 12:03:41 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.9ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1169)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 6218)
+
+
+Started GET "/groups" for ::1 at 2020-09-04 12:03:41 +1200
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 689)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.7ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.5ms | Allocations: 1169)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 6216)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 12:03:42 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1169)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.6ms | Allocations: 6220)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:03:43 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.2ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1169)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms | Allocations: 6343)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:04:02 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1041)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.8ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 2.1ms | Allocations: 1478)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.5ms | Allocations: 8736)
+
+
+Started GET "/" for ::1 at 2020-09-04 12:04:04 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1147)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3531)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 203)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 6365)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:04:17 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 819)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 5.5ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 2.8ms | Allocations: 1176)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 1.2ms | Allocations: 6363)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:05:15 +1200
+  
+SyntaxError (/Users/NORIE/code/arievdp/flat-cost-calculator/app/controllers/flats_controller.rb:6: syntax error, unexpected end, expecting ')'
+  end
+  ^~~
+/Users/NORIE/code/arievdp/flat-cost-calculator/app/controllers/flats_controller.rb:41: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/flats_controller.rb:6: syntax error, unexpected end, expecting ')'
+app/controllers/flats_controller.rb:41: syntax error, unexpected end-of-input, expecting end
+app/controllers/flats_controller.rb:6: syntax error, unexpected end, expecting ')'
+app/controllers/flats_controller.rb:41: syntax error, unexpected end-of-input, expecting end
+app/controllers/flats_controller.rb:6: syntax error, unexpected end, expecting ')'
+app/controllers/flats_controller.rb:41: syntax error, unexpected end-of-input, expecting end
+Started GET "/flats" for ::1 at 2020-09-04 12:05:28 +1200
+Processing by FlatsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 3.2ms | Allocations: 72506)
+
+
+  
+NoMethodError (undefined method `where' for #<FlatsController:0x00007f9a53a068e8>
+Did you mean?  when):
+  
+app/controllers/flats_controller.rb:5:in `index'
+Started GET "/flats" for ::1 at 2020-09-04 12:05:38 +1200
+Processing by FlatsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:5:in `index'
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (5.8ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE (user_id)[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2151)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 8.6ms | Allocations: 15725)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "user_id" does not exist
+LINE 1: SELECT "flats".* FROM "flats" WHERE (user_id)
+                                             ^
+):
+    10:   </thead>
+    11: 
+    12:   <tbody>
+    13:     <% @flats.each do |flat| %>
+    14:       <tr>
+    15:         <td><%= link_to 'Show', flat %></td>
+    16:         <td><%= link_to 'Edit', edit_flat_path(flat) %></td>
+  
+app/views/flats/index.html.erb:13
+Started GET "/flats" for ::1 at 2020-09-04 12:07:19 +1200
+Processing by FlatsController#index as HTML
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 0.0ms | Allocations: 118511)
+
+
+  
+NameError (undefined local variable or method `flat' for #<FlatsController:0x00007f9a53c61930>
+Did you mean?  Float):
+  
+app/controllers/flats_controller.rb:5:in `index'
+Started GET "/flats" for ::1 at 2020-09-04 12:07:27 +1200
+Processing by FlatsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 5282)
+
+
+  
+NoMethodError (undefined method `users' for #<Class:0x00007f9a53a61d10>
+Did you mean?  upsert):
+  
+app/controllers/flats_controller.rb:5:in `index'
+Started GET "/flats" for ::1 at 2020-09-04 12:07:50 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.8ms | Allocations: 3532)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 14.7ms | Allocations: 11115)
+Completed 200 OK in 31ms (Views: 22.7ms | ActiveRecord: 5.5ms | Allocations: 21711)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:08:41 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.5ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.8ms | Allocations: 1477)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.5ms | Allocations: 8756)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:08:51 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1073)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.2ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.9ms | Allocations: 1477)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 8738)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:08:55 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  Rendered flats/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 208)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.4ms | Allocations: 1175)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 6578)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:09:49 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  Rendered flats/show.html.erb within layouts/application (Duration: 283.9ms | Allocations: 175134)
+Completed 500 Internal Server Error in 287ms (ActiveRecord: 0.2ms | Allocations: 177096)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `flat' for #<#<Class:0x00007f9a58a66860>:0x00007f9a58a64f60>
+Did you mean?  @flat
+               Float):
+    1: <p id="notice"><%= notice %></p>
+    2: <h2><%= flat.name %></h2>
+    3: <h2><%= flat.address %></h2>
+    4: <%= link_to 'Edit', edit_flat_path(@flat) %> |
+    5: <%= link_to 'Back', flats_path %>
+  
+app/views/flats/show.html.erb:2
+Started GET "/flats/1" for ::1 at 2020-09-04 12:09:54 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  Rendered flats/show.html.erb within layouts/application (Duration: 277.3ms | Allocations: 175116)
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 0.2ms | Allocations: 177083)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `flat' for #<#<Class:0x00007f9a53dc2c20>:0x00007f9a53dc0a60>
+Did you mean?  @flat
+               Float):
+    1: <p id="notice"><%= notice %></p>
+    2: <h2><%= flat.title %></h2>
+    3: <h2><%= flat.address %></h2>
+    4: <%= link_to 'Edit', edit_flat_path(@flat) %> |
+    5: <%= link_to 'Back', flats_path %>
+  
+app/views/flats/show.html.erb:2
+Started GET "/flats/1" for ::1 at 2020-09-04 12:10:00 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  Rendered flats/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3833)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 2.1ms | Allocations: 1477)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.4ms | Allocations: 8530)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:10:16 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  Rendered flats/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1085)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 3039)
+
+
+  
+ActionView::Template::Error ():
+    1: <p id="notice"><%= notice %></p>
+    2: <h2><%= @flat.title %></h2>
+    3: <h2><%= @flat.address %></h2>
+    4: <h2><%= raise %></h2>
+    5: <%= link_to 'Edit', edit_flat_path(@flat) %> |
+    6: <%= link_to 'Back', flats_path %>
+  
+app/views/flats/show.html.erb:4
+Started PUT "/__web_console/repl_sessions/0c7c0063a6613c322b5d7bf0ff81e7e4" for ::1 at 2020-09-04 12:10:19 +1200
+Started PUT "/__web_console/repl_sessions/0c7c0063a6613c322b5d7bf0ff81e7e4" for ::1 at 2020-09-04 12:10:20 +1200
+Started PUT "/__web_console/repl_sessions/0c7c0063a6613c322b5d7bf0ff81e7e4" for ::1 at 2020-09-04 12:10:21 +1200
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1 LIMIT $2[0m  [["flat_id", 1], ["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/0c7c0063a6613c322b5d7bf0ff81e7e4" for ::1 at 2020-09-04 12:10:28 +1200
+Started PUT "/__web_console/repl_sessions/0c7c0063a6613c322b5d7bf0ff81e7e4" for ::1 at 2020-09-04 12:10:29 +1200
+Started PUT "/__web_console/repl_sessions/0c7c0063a6613c322b5d7bf0ff81e7e4" for ::1 at 2020-09-04 12:10:32 +1200
+Started PUT "/__web_console/repl_sessions/0c7c0063a6613c322b5d7bf0ff81e7e4" for ::1 at 2020-09-04 12:10:34 +1200
+Started GET "/flats/1" for ::1 at 2020-09-04 12:12:22 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:5
+  Rendered flats/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3833)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.9ms | Allocations: 1477)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.7ms | Allocations: 9885)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:12:55 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:6
+  Rendered flats/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1288)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.2ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.8ms | Allocations: 1477)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.7ms | Allocations: 9561)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:13:00 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:6
+  Rendered flats/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1477)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.7ms | Allocations: 9565)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:13:27 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:6
+  Rendered flats/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 5301)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3481)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 12.0ms | Allocations: 10145)
+Completed 200 OK in 37ms (Views: 22.4ms | ActiveRecord: 5.9ms | Allocations: 26385)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:13:43 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:6
+  Rendered flats/show.html.erb within layouts/application (Duration: 7.4ms | Allocations: 5352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.5ms | Allocations: 3482)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 11.4ms | Allocations: 10145)
+Completed 200 OK in 36ms (Views: 21.3ms | ActiveRecord: 6.1ms | Allocations: 26320)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:14:30 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:12
+  Rendered flats/show.html.erb within layouts/application (Duration: 11.0ms | Allocations: 6049)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.1ms | Allocations: 3731)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.9ms | Allocations: 1477)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 1.8ms | Allocations: 14222)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:14:50 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:12
+  Rendered flats/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2140)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.8ms | Allocations: 1477)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.8ms | Allocations: 10415)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:16:02 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:7
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:14
+  Rendered flats/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2147)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.2ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.9ms | Allocations: 1477)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.8ms | Allocations: 10424)
+
+
+Started GET "/flats/1/edit" for ::1 at 2020-09-04 12:16:11 +1200
+Processing by FlatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/edit.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 1.2ms | Allocations: 670)
+  Rendered flats/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1065)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 18.4ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1177)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.4ms | Allocations: 7336)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:16:15 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:7
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:14
+  Rendered flats/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.8ms | Allocations: 3580)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1169)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.9ms | Allocations: 7979)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (23.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flat_cost_calculator_development"[0m
+  [1m[35m (19.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flat_cost_calculator_test"[0m
+  [1m[35m (58.7ms)[0m  [1m[35mCREATE DATABASE "flat_cost_calculator_development" ENCODING = 'unicode'[0m
+  [1m[35m (51.4ms)[0m  [1m[35mCREATE DATABASE "flat_cost_calculator_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "flats" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "flats" ("id" bigserial primary key, "title" character varying, "address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "groups" CASCADE[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_flat_id" ON "groups"  ("flat_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_user_id" ON "groups"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "title" character varying, "amount" character varying, "date" timestamp, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_flat_id" ON "transactions"  ("flat_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "first_name" character varying, "last_name" character varying, "admin" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "provider" character varying, "uid" character varying, "name" character varying, "image" text)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_db9cc81f43"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_5e78cd340a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_7dd6243fc0"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200903234334)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200903102247),
+(20200903102257),
+(20200903105250),
+(20200903223857),
+(20200903225517);
+
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-04 00:17:18.827340"], ["updated_at", "2020-09-04 00:17:18.827340"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "6eb01568eada9019ba0a1f8bf165c287f2d5363e"], ["created_at", "2020-09-04 00:17:18.845207"], ["updated_at", "2020-09-04 00:17:18.845207"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "flats" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "flats" ("id" bigserial primary key, "title" character varying, "address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "groups" CASCADE[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_flat_id" ON "groups"  ("flat_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_user_id" ON "groups"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "title" character varying, "amount" character varying, "date" timestamp, "user_id" bigint NOT NULL, "flat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_flat_id" ON "transactions"  ("flat_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "first_name" character varying, "last_name" character varying, "admin" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "provider" character varying, "uid" character varying, "name" character varying, "image" text)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_db9cc81f43"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_5e78cd340a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_7dd6243fc0"
+FOREIGN KEY ("flat_id")
+  REFERENCES "flats" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200903234334)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200903102247),
+(20200903102257),
+(20200903105250),
+(20200903223857),
+(20200903225517);
+
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-04 00:17:18.948823"], ["updated_at", "2020-09-04 00:17:18.948823"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-04 00:17:18.954019"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "6eb01568eada9019ba0a1f8bf165c287f2d5363e"], ["created_at", "2020-09-04 00:17:18.959291"], ["updated_at", "2020-09-04 00:17:18.959291"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$12$Ve9qzDWzYYC6qTYsRzgQ/OJBhGAiAKEdKZ0HUZbC6QBK8xA0D1nDi"], ["first_name", "User"], ["last_name", "Puser"], ["created_at", "2020-09-04 00:17:19.259233"], ["updated_at", "2020-09-04 00:17:19.259233"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFlat Create (0.4ms)[0m  [1m[32mINSERT INTO "flats" ("title", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Home sweet home"], ["address", "7/29 Sentinel road, Auckland"], ["created_at", "2020-09-04 00:17:19.273553"], ["updated_at", "2020-09-04 00:17:19.273553"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" ORDER BY "flats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Create (0.8ms)[0m  [1m[32mINSERT INTO "transactions" ("title", "amount", "user_id", "flat_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Toilet paper"], ["amount", "1.96"], ["user_id", 1], ["flat_id", 1], ["created_at", "2020-09-04 00:17:19.292439"], ["updated_at", "2020-09-04 00:17:19.292439"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" ORDER BY "flats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Create (0.8ms)[0m  [1m[32mINSERT INTO "groups" ("user_id", "flat_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["flat_id", 1], ["created_at", "2020-09-04 00:17:19.307481"], ["updated_at", "2020-09-04 00:17:19.307481"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/flats/1" for ::1 at 2020-09-04 12:17:26 +1200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:7
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:14
+  Rendered flats/show.html.erb within layouts/application (Duration: 53.1ms | Allocations: 28935)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 11.0ms | Allocations: 38284)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Transaction:0x00007fe9d353c978>):
+    12: <h2>Transactions:</h2>
+    13: <ul>
+    14: <% @flat.transactions.each do |t| %>
+    15:   <p><%= t.name %></p>
+    16:   <p><%= t.email %></p>
+    17: <% end %>
+    18: </ul>
+  
+app/views/flats/show.html.erb:15
+app/views/flats/show.html.erb:14
+Started GET "/flats/1" for ::1 at 2020-09-04 12:18:02 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:7
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:14
+  Rendered flats/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2235)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 7.4ms | Allocations: 6315)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 202)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 4.1ms | Allocations: 1643)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 1.1ms | Allocations: 13242)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:19:16 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:7
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:14
+  Rendered flats/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3834)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 570)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.8ms | Allocations: 9560)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 12:19:17 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3532)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 269)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 6445)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 12:20:35 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.9ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 262)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.3ms | Allocations: 5456)
+
+
+Started GET "/transactions/1" for ::1 at 2020-09-04 12:20:40 +1200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:35:in `set_transaction'
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 212)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.5ms | Allocations: 3583)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 268)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 5677)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 12:20:42 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 820)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 5.6ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 262)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 5438)
+
+
