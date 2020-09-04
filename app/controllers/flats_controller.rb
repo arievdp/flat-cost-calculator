@@ -21,6 +21,7 @@ class FlatsController < ApplicationController
   def edit; end
 
   def update
+    # raise
     @flat.update(flat_params)
     redirect_to flat_path(@flat)
   end
@@ -38,6 +39,6 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:title, :address)
+    params.require(:flat).permit(:title, :address, user_ids: [])
   end
 end

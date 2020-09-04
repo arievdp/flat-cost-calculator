@@ -1,6 +1,12 @@
 <h1>Editing Flat</h1>
 
-<%= render 'form', flat: @flat %>
+<%= simple_form_for(@flat) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :address %>
+  <%= f.association :users, as: :check_boxes %>
+  <%= f.submit %>
+<% end %>
+
 
 <%= link_to 'Show', @flat %> |
 <%= link_to 'Back', flats_path %>

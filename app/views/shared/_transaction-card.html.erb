@@ -1,0 +1,35 @@
+<tr>
+  <td class="px-6 py-4 whitespace-no-wrap">
+    <div class="flex items-center">
+      <div class="flex-shrink-0 h-10 w-10">
+        <% if t.user.image.nil? %>
+          <img class="h-10 w-10 rounded-full" src="http://civilcode.ge/images/2/24/Blank-avatar.png" alt="">
+        <% else %>
+          <img class="h-10 w-10 rounded-full" src="<%= t.user.image %>" alt="">
+        <% end %>
+      </div>
+      <div class="ml-4">
+        <div class="text-sm leading-5 font-medium text-gray-900">
+          <%= t.user.name %>
+        </div>
+        <div class="text-sm leading-5 text-gray-500">
+          <%= t.user.email %>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td class="px-6 py-4 whitespace-no-wrap">
+    <div class="text-sm leading-5 text-gray-900"><%= t.title %></div>
+  </td>
+  <td class="px-6 py-4 whitespace-no-wrap">
+    <div class="text-sm leading-5 text-gray-900">$<%= t.amount %></div>
+  </td>
+   <td class="px-6 py-4 whitespace-no-wrap">
+    <div class="text-sm leading-5 text-gray-900"><%= t.date %></div>
+  </td>
+  <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+    <% if t.user == current_user %>
+      <%= link_to 'Edit', edit_transaction_path(t), class: "text-indigo-600 hover:text-indigo-900" %>
+    <% end %>
+  </td>
+</tr>

@@ -1,20 +1,58 @@
 <p id="notice"><%= notice %></p>
-<h2>Name: <%= @flat.title %></h2>
-<h2>Address: <%= @flat.address %></h2>
-<br>
-<h2>Flatmates:</h2>
-<ul>
-<% @flat.users.each do |user| %>
-  <p><%= user.name %> | <%= user.email %></p>
-<% end %>
-</ul>
-<br>
-<h2>Transactions:</h2>
-<ul>
-<% @flat.transactions.each do |t| %>
-  <p><%= t.title %> | <%= t.amount %></p>
-<% end %>
-</ul>
-<br>
-<%= link_to 'Edit', edit_flat_path(@flat) %> |
-<%= link_to 'Back', flats_path %>
+<section class="text-gray-700 body-font">
+  <div class="py-6">
+    <div class="flex flex-col text-center w-full mb-10">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"><%= @flat.title %></h1>
+      <h3 class="mb-4 text-gray-900"><%= @flat.address %></h3>
+      <div>
+        <%= link_to 'Edit', edit_flat_path(@flat) %> |
+        <%= link_to 'Back', flats_path %>
+      </div>
+    </div>
+    <div class="flex flex-wrap -m-2">
+      <% @flat.users.each do |user| %>
+        <%= render 'shared/flatmate-card', user: user %>
+      <% end %>
+    </div>
+  </div>
+</section>
+<div class="flex flex-col py-6">
+  <div class="flex flex-col text-center w-full mb-10">
+    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Transactions</h1>
+    <div>
+        <%= link_to 'Add', new_transaction_path(@flat) %>
+    </div>
+  </div>
+  <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+      <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead>
+            <tr>
+              <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Name
+              </th>
+              <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Item
+              </th>
+              <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Amount
+              </th>
+              <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Date
+              </th>
+              <th class="px-6 py-3 bg-gray-50"></th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <% @flat.transactions.each do |t| %>
+              <%= render 'shared/transaction-card', t: t %>
+            <% end %>
+            <!-- More rows... -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

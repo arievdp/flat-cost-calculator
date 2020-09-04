@@ -1,0 +1,25 @@
+<div class="p-4 lg:w-1/3">
+  <div class="h-full bg-gray-200 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+    <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3"><%= flat.title %></h1>
+    <p class="leading-relaxed mb-3"><%= flat.address %></p>
+    <%= link_to flat_path(flat), {class: "text-indigo-500 inline-flex items-center"} do %>
+      <p>View</p>
+      <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14"></path>
+        <path d="M12 5l7 7-7 7"></path>
+      </svg>
+    <% end %>
+    <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+      <span class="text-gray-600 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-300">
+        <svg class="w-4 h-4 mr-1" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <path d="M10 20a10 10 0 110-20 10 10 0 010 20zm1-5h1a3 3 0 000-6H7.99a1 1 0 010-2H14V5h-3V3H9v2H8a3 3 0 100 6h4a1 1 0 110 2H6v2h3v2h2v-2z"></path>
+        </svg><%= flat.transactions.count %>
+      </span>
+      <span class="text-gray-600 inline-flex items-center leading-none text-sm">
+        <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24">
+          <path d="M2 6H0v2h2v2h2V8h2V6H4V4H2v2zm7 0a3 3 0 016 0v2a3 3 0 01-6 0V6zm11 9.14A15.93 15.93 0 0012 13c-2.91 0-5.65.78-8 2.14V18h16v-2.86z"></path>
+        </svg><%= flat.users.count %>
+      </span>
+    </div>
+  </div>
+</div>

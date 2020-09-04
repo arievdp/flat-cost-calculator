@@ -1,16 +1,10 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Flats:</h1>
-<% @flats.each do |flat| %>
-  <br>
-  <h2><%= flat.title %></h2>
-  <h2><%= flat.address %></h2>
-  <tr>
-    <td><%= link_to 'Show', flat %></td>
-    <td><%= link_to 'Edit', edit_flat_path(flat) %></td>
-    <td><%= link_to 'Destroy', flat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-  <br>
-<% end %>
-<br>
-<%= link_to 'New Flat', new_flat_path %>
+<section class="text-gray-700 body-font">
+  <div class="container px-5 py-12 mx-auto">
+    <div class="flex flex-wrap -m-4">
+      <% @flats.each do |flat| %>
+        <%= render 'shared/flat-card', flat: flat %>
+      <% end %>
+    </div>
+  </div>
+</section>
