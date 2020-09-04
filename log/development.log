@@ -2363,3 +2363,1803 @@ Processing by TransactionsController#index as HTML
 Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 5438)
 
 
+Started GET "/transactions" for ::1 at 2020-09-04 12:28:10 +1200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 7017)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 8.3ms | Allocations: 6313)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 2.2ms | Allocations: 610)
+Completed 200 OK in 35ms (Views: 23.4ms | ActiveRecord: 4.2ms | Allocations: 18887)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:28:14 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.5ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 4418)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 10.4ms | Allocations: 3584)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 269)
+Completed 200 OK in 31ms (Views: 24.0ms | ActiveRecord: 2.9ms | Allocations: 11468)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:28:23 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:7
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:14
+  Rendered flats/show.html.erb within layouts/application (Duration: 63.8ms | Allocations: 19801)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3483)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 224)
+Completed 200 OK in 76ms (Views: 65.3ms | ActiveRecord: 4.3ms | Allocations: 25555)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:31:38 +1200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.4ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 4928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 19.5ms | Allocations: 6312)
+  Rendered shared/_flash_notice.html.erb (Duration: 1.1ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 3.6ms | Allocations: 610)
+Completed 200 OK in 47ms (Views: 35.8ms | ActiveRecord: 3.5ms | Allocations: 17558)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:31:39 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 369.6ms | Allocations: 175886)
+  Rendered flats/new.html.erb within layouts/application (Duration: 371.1ms | Allocations: 176216)
+Completed 500 Internal Server Error in 374ms (ActiveRecord: 0.0ms | Allocations: 176922)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007fd9c68cca10>:0x00007fd9c271ab08>):
+    10:       </ul>
+    11:     </div>
+    12:   <% end %>
+    13:   <%= f.input :title %>
+    14:   <div class="actions">
+    15:     <%= form.submit %>
+    16:   </div>
+  
+app/views/flats/_form.html.erb:13
+app/views/flats/_form.html.erb:1
+app/views/flats/new.html.erb:3
+Started GET "/flats/new" for ::1 at 2020-09-04 12:32:16 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 370.5ms | Allocations: 195432)
+  Rendered flats/new.html.erb within layouts/application (Duration: 371.5ms | Allocations: 195758)
+Completed 500 Internal Server Error in 375ms (ActiveRecord: 0.0ms | Allocations: 197180)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x00007fd9c36e4610>:0x00007fd9c36eebb0>
+Did you mean?  for
+               fork):
+    12:   <% end %>
+    13:   <%= f.input :title %>
+    14:   <div class="actions">
+    15:     <%= form.submit %>
+    16:   </div>
+    17: <% end %>
+  
+app/views/flats/_form.html.erb:15
+app/views/flats/_form.html.erb:1
+app/views/flats/new.html.erb:3
+Started GET "/flats/new" for ::1 at 2020-09-04 12:32:21 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 4.3ms | Allocations: 3506)
+  Rendered flats/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3851)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.2ms | Allocations: 3755)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 576)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 10599)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:32:43 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 135.6ms | Allocations: 87686)
+  Rendered flats/new.html.erb within layouts/application (Duration: 136.4ms | Allocations: 88011)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.0ms | Allocations: 89367)
+
+
+  
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x00007fd9c3747f08>):
+    10:       </ul>
+    11:     </div>
+    12:   <% end %>
+    13:   <%= form.input :title %>
+    14:   <div class="actions">
+    15:     <%= form.submit %>
+    16:   </div>
+  
+app/views/flats/_form.html.erb:13
+app/views/flats/_form.html.erb:1
+app/views/flats/new.html.erb:3
+Started GET "/flats/new" for ::1 at 2020-09-04 12:33:26 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 0.9ms | Allocations: 1423)
+  Rendered flats/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1748)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3108)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    10:       </ul>
+    11:     </div>
+    12:   <% end %>
+    13:   <%= form.input %>
+    14:   <div class="actions">
+    15:     <%= form.submit %>
+    16:   </div>
+  
+app/views/flats/_form.html.erb:13
+app/views/flats/_form.html.erb:1
+app/views/flats/new.html.erb:3
+Started GET "/flats/new" for ::1 at 2020-09-04 12:33:40 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 5.4ms | Allocations: 4305)
+  Rendered flats/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4649)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.9ms | Allocations: 3731)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 570)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 11338)
+
+
+Started POST "/flats" for ::1 at 2020-09-04 12:34:17 +1200
+Processing by FlatsController#create as HTML
+  Parameters: {"authenticity_token"=>"Mrpn2NaemTSH3HFrHdrcKAQjOv9aOHycFeXHdusBeGzSXunMwn203Lh1UR7FjcznzKhweH+YqCFY/M8ARb1RQg==", "flat"=>{"title"=>"Test", "address"=>"Test"}, "commit"=>"Create Flat"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flats_controller.rb:16:in `create'
+  [1m[36mFlat Create (0.4ms)[0m  [1m[32mINSERT INTO "flats" ("title", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Test"], ["address", "Test"], ["created_at", "2020-09-04 00:34:17.283295"], ["updated_at", "2020-09-04 00:34:17.283295"]]
+  ↳ app/controllers/flats_controller.rb:16:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flats_controller.rb:16:in `create'
+Redirected to http://localhost:3000/flats
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms | Allocations: 3188)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:34:17 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1204)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3581)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 269)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 5967)
+
+
+Started GET "/flats/2/edit" for ::1 at 2020-09-04 12:35:10 +1200
+Processing by FlatsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/edit.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 5.3ms | Allocations: 3864)
+  Rendered flats/edit.html.erb within layouts/application (Duration: 5.8ms | Allocations: 4119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3479)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 224)
+Completed 200 OK in 34ms (Views: 24.8ms | ActiveRecord: 0.4ms | Allocations: 11808)
+
+
+Started PATCH "/flats/2" for ::1 at 2020-09-04 12:35:13 +1200
+Processing by FlatsController#update as HTML
+  Parameters: {"authenticity_token"=>"QWQn7S7EImQGBbfz2tcrDZpXoVapizI2BTwM2NRbaEOKfR1YZHJLG6y8jIC3QwuJ95tZExtluBt37p1vEHQsJg==", "flat"=>{"title"=>"Test", "address"=>"Test address"}, "commit"=>"Update Flat", "id"=>"2"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flats_controller.rb:23:in `update'
+  [1m[36mFlat Update (0.4ms)[0m  [1m[33mUPDATE "flats" SET "address" = $1, "updated_at" = $2 WHERE "flats"."id" = $3[0m  [["address", "Test address"], ["updated_at", "2020-09-04 00:35:13.827830"], ["id", 2]]
+  ↳ app/controllers/flats_controller.rb:23:in `update'
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flats_controller.rb:23:in `update'
+Redirected to http://localhost:3000/flats/2
+Completed 302 Found in 11ms (ActiveRecord: 6.1ms | Allocations: 3694)
+
+
+Started GET "/flats/2" for ::1 at 2020-09-04 12:35:13 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 2]]
+  ↳ app/views/flats/show.html.erb:7
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 2]]
+  ↳ app/views/flats/show.html.erb:14
+  Rendered flats/show.html.erb within layouts/application (Duration: 18.3ms | Allocations: 11176)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.1ms | Allocations: 3481)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 224)
+Completed 200 OK in 25ms (Views: 18.2ms | ActiveRecord: 5.4ms | Allocations: 16457)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:35:16 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:13
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 957)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.9ms | Allocations: 3581)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 262)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 5589)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:36:00 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:11
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 570)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 7971)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:36:01 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:11
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 949)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.6ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 262)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 5564)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:36:04 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:11
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.2ms | Allocations: 196)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 570)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.2ms | Allocations: 7950)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:36:15 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:11
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 570)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 7972)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:36:16 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:11
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 949)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.9ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 262)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 5576)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:37:01 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 570)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 7947)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:37:02 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 957)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.9ms | Allocations: 3583)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 262)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 5584)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:37:23 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 570)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.3ms | Allocations: 7939)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:37:35 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.7ms | Allocations: 3833)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 570)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 7958)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:37:48 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1177)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 570)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 7938)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:37:55 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1177)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 570)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.3ms | Allocations: 7938)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:38:02 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1178)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.8ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 570)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 7945)
+
+
+Started GET "/flats/2" for ::1 at 2020-09-04 12:38:16 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 2]]
+  ↳ app/views/flats/show.html.erb:7
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 2]]
+  ↳ app/views/flats/show.html.erb:14
+  Rendered flats/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2146)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.5ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 224)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.8ms | Allocations: 7528)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:38:18 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.8ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 262)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 5565)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 12:38:19 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:7
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:14
+  Rendered flats/show.html.erb within layouts/application (Duration: 25.7ms | Allocations: 19082)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.6ms | Allocations: 3478)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 218)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 2.1ms | Allocations: 24229)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:38:20 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 944)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 5.1ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 262)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 5563)
+
+
+Started GET "/flats/2" for ::1 at 2020-09-04 12:38:21 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:35:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 2]]
+  ↳ app/views/flats/show.html.erb:7
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 2]]
+  ↳ app/views/flats/show.html.erb:14
+  Rendered flats/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1849)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.1ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.9ms | Allocations: 7091)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 12:38:58 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4327)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.5ms | Allocations: 3532)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 279)
+Completed 200 OK in 18ms (Views: 11.9ms | ActiveRecord: 3.0ms | Allocations: 11466)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:39:00 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 5.2ms | Allocations: 4376)
+  Rendered flats/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 4725)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.1ms | Allocations: 3478)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 268)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 9396)
+
+
+Started POST "/flats" for ::1 at 2020-09-04 12:39:06 +1200
+Processing by FlatsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZAuU/eBdrjRDCibKfTjpn0zYYY+plKcbHi8H5rzCsi0P8qRnloSJSJzzQDRufgTys+5quZiukCKyM1JEG/lEJA==", "flat"=>{"title"=>"Test 2", "address"=>"Test address"}, "commit"=>"Create Flat"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2512)
+
+
+  
+NoMethodError (undefined method `user=' for #<Flat:0x00007fd9c1438328>
+Did you mean?  users=
+               users):
+  
+app/controllers/flats_controller.rb:16:in `create'
+Started GET "/flats" for ::1 at 2020-09-04 12:43:07 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 4326)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.8ms | Allocations: 3532)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 279)
+Completed 200 OK in 17ms (Views: 10.3ms | ActiveRecord: 3.1ms | Allocations: 11456)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:43:09 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 5.2ms | Allocations: 4100)
+  Rendered flats/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 4193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3477)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 262)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 8713)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:43:30 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 5.2ms | Allocations: 4103)
+  Rendered flats/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.1ms | Allocations: 3730)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 570)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 11141)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:45:05 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 5.4ms | Allocations: 4098)
+  Rendered flats/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 4441)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3730)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 570)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 11119)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:45:47 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 4.8ms | Allocations: 3824)
+  Rendered flats/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3917)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 5.5ms | Allocations: 3478)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 262)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 8447)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:46:06 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 5.0ms | Allocations: 3984)
+  Rendered flats/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 4327)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.9ms | Allocations: 3730)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.2ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 570)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 10995)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:48:12 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 1.2ms | Allocations: 580)
+  Rendered flats/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 924)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.5ms | Allocations: 3831)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 570)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 7713)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:48:24 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 163.5ms | Allocations: 87692)
+  Rendered flats/new.html.erb within layouts/application (Duration: 164.2ms | Allocations: 88016)
+Completed 500 Internal Server Error in 167ms (ActiveRecord: 0.0ms | Allocations: 89378)
+
+
+  
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x00007fd9c6b4e950>):
+    10:       </ul>
+    11:     </div>
+    12:   <% end %>
+    13:   <%= form.input :title %>
+    14:   <div class="actions">
+    15:     <%= form.submit %>
+    16:   </div>
+  
+app/views/flats/_form.html.erb:13
+app/views/flats/_form.html.erb:1
+app/views/flats/new.html.erb:3
+Started GET "/flats/new" for ::1 at 2020-09-04 12:50:04 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 1.0ms | Allocations: 616)
+  Rendered flats/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 961)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 570)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 7757)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:51:06 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 0.9ms | Allocations: 620)
+  Rendered flats/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 964)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3831)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 570)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 7753)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:51:16 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 148.0ms | Allocations: 87732)
+  Rendered flats/new.html.erb within layouts/application (Duration: 148.7ms | Allocations: 88056)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 0.0ms | Allocations: 89404)
+
+
+  
+ActionView::Template::Error (undefined method `text_field_tag' for #<ActionView::Helpers::FormBuilder:0x00007fd9c8a21648>
+Did you mean?  text_field):
+    10:       </ul>
+    11:     </div>
+    12:   <% end %>
+    13:   <%= form.text_field_tag(:title) %>
+    14:   <div class="actions">
+    15:     <%= form.submit %>
+    16:   </div>
+  
+app/views/flats/_form.html.erb:13
+app/views/flats/_form.html.erb:1
+app/views/flats/new.html.erb:3
+Started GET "/flats/new" for ::1 at 2020-09-04 12:51:21 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 1.0ms | Allocations: 619)
+  Rendered flats/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 964)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 570)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 7747)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:54:13 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 1.1ms | Allocations: 628)
+  Rendered flats/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 972)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3831)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 570)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 7760)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:54:33 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 1.1ms | Allocations: 660)
+  Rendered flats/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.2ms | Allocations: 3831)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 570)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 7785)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:55:51 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 0.6ms | Allocations: 1348)
+  Rendered flats/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1672)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 3037)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: flat, local: true) do |form| %>
+  <% if flat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(flat.errors.count, "error") %> prohibited this flat from being saved:</h2>
+
+      <ul>
+        <% flat.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= text_field_tag(:title), class: "block text-gray-700 text-sm font-bold mb-2" %>
+  <%= text_field_tag(:address) %>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: flat, local: true) do |form| %>
+2:      <% if flat.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(flat.errors.count, "error") %> prohibited this flat from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% flat.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <%= text_field_tag(:title), class: "block text-gray-700 text-sm font-bold mb-2" %>
+15:      <%= text_field_tag(:address) %>
+16:      <div class="actions">
+17:        <%= form.submit %>
+18:      </div>
+19:    <% end %>
+  
+app/views/flats/_form.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/flats/_form.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/flats/_form.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/flats/_form.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/flats/_form.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/flats/_form.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/flats/new.html.erb:3
+Started GET "/flats/new" for ::1 at 2020-09-04 12:56:43 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 1.0ms | Allocations: 661)
+  Rendered flats/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1006)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.1ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 570)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 7806)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 12:58:08 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 1.0ms | Allocations: 662)
+  Rendered flats/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1006)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.8ms | Allocations: 3831)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.2ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 570)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 7791)
+
+
+Started POST "/flats" for ::1 at 2020-09-04 12:58:13 +1200
+Processing by FlatsController#create as HTML
+  Parameters: {"authenticity_token"=>"ONvbVWIRnosuWseTbXZ/I9ZeyAa2M525L4b5bgUEjbrYP1VBdvKzYxHz5+a1IW/sHtWCgZOTSQRin/EYq7iklA==", "title"=>"", "address"=>"", "commit"=>"Create Flat"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 729)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: flat):
+  
+app/controllers/flats_controller.rb:41:in `flat_params'
+app/controllers/flats_controller.rb:15:in `create'
+Started POST "/flats" for ::1 at 2020-09-04 12:58:24 +1200
+Processing by FlatsController#create as HTML
+  Parameters: {"authenticity_token"=>"ONvbVWIRnosuWseTbXZ/I9ZeyAa2M525L4b5bgUEjbrYP1VBdvKzYxHz5+a1IW/sHtWCgZOTSQRin/EYq7iklA==", "title"=>"Ploop", "address"=>"493b Norwoord Rd", "commit"=>"Create Flat"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 726)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: flat):
+  
+app/controllers/flats_controller.rb:41:in `flat_params'
+app/controllers/flats_controller.rb:15:in `create'
+Started POST "/flats" for ::1 at 2020-09-04 13:01:12 +1200
+Processing by FlatsController#create as HTML
+  Parameters: {"authenticity_token"=>"ONvbVWIRnosuWseTbXZ/I9ZeyAa2M525L4b5bgUEjbrYP1VBdvKzYxHz5+a1IW/sHtWCgZOTSQRin/EYq7iklA==", "title"=>"Ploop", "address"=>"493b Norwoord Rd", "commit"=>"Create Flat"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 726)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: flat):
+  
+app/controllers/flats_controller.rb:41:in `flat_params'
+app/controllers/flats_controller.rb:15:in `create'
+Started GET "/flats" for ::1 at 2020-09-04 13:01:16 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1176)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3833)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.2ms | Allocations: 196)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 570)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 7956)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 13:01:19 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 5.1ms | Allocations: 4017)
+  Rendered flats/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 4361)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.1ms | Allocations: 3478)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 268)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 9033)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 13:01:59 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 4.7ms | Allocations: 3984)
+  Rendered flats/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 4327)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.7ms | Allocations: 3730)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 570)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 11007)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 13:02:09 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 5.5ms | Allocations: 3824)
+  Rendered flats/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3917)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.7ms | Allocations: 3478)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 262)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 8445)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 13:02:23 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 4.8ms | Allocations: 4005)
+  Rendered flats/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 4354)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.1ms | Allocations: 3731)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 570)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 11031)
+
+
+Started POST "/flats" for ::1 at 2020-09-04 13:02:41 +1200
+Processing by FlatsController#create as HTML
+  Parameters: {"authenticity_token"=>"8rYzjWKb5mYluw9uZW5F94wVkqAonSDpFGM5x43TrqwSUr2ZdnjLjhoSLxu9OVU4RJ7YJw099FRZejGxI2+Hgg==", "flat"=>{"title"=>"My New Flat", "address"=>"Test"}, "commit"=>"Create Flat"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flats_controller.rb:17:in `create'
+  [1m[36mFlat Create (0.2ms)[0m  [1m[32mINSERT INTO "flats" ("title", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "My New Flat"], ["address", "Test"], ["created_at", "2020-09-04 01:02:41.585955"], ["updated_at", "2020-09-04 01:02:41.585955"]]
+  ↳ app/controllers/flats_controller.rb:17:in `create'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flats_controller.rb:17:in `create'
+Redirected to http://localhost:3000/flats
+Completed 302 Found in 30ms (ActiveRecord: 9.0ms | Allocations: 8808)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 13:02:41 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.2ms | Allocations: 3580)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 269)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 6052)
+
+
+Started GET "/flats/3/edit" for ::1 at 2020-09-04 13:02:43 +1200
+Processing by FlatsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:36:in `set_flat'
+  Rendering flats/edit.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 5.5ms | Allocations: 3874)
+  Rendered flats/edit.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.9ms | Allocations: 3478)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 224)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 9515)
+
+
+Started PATCH "/flats/3" for ::1 at 2020-09-04 13:02:46 +1200
+Processing by FlatsController#update as HTML
+  Parameters: {"authenticity_token"=>"VeyG5Lf3qMdin7M+RzKOeSIujsn2N76c5QKYUpWTgYMILC27dDWz4U+JZ1RwqG1Kg73Vc+uiDdgyQU/6NQB3NQ==", "flat"=>{"title"=>"My New Flat", "address"=>"MEEP"}, "commit"=>"Update Flat", "id"=>"3"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:36:in `set_flat'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flats_controller.rb:24:in `update'
+  [1m[36mFlat Update (0.3ms)[0m  [1m[33mUPDATE "flats" SET "address" = $1, "updated_at" = $2 WHERE "flats"."id" = $3[0m  [["address", "MEEP"], ["updated_at", "2020-09-04 01:02:46.866896"], ["id", 3]]
+  ↳ app/controllers/flats_controller.rb:24:in `update'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flats_controller.rb:24:in `update'
+Redirected to http://localhost:3000/flats/3
+Completed 302 Found in 11ms (ActiveRecord: 6.7ms | Allocations: 3644)
+
+
+Started GET "/flats/3" for ::1 at 2020-09-04 13:02:46 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:36:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 3]]
+  ↳ app/views/flats/show.html.erb:7
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 3]]
+  ↳ app/views/flats/show.html.erb:14
+  Rendered flats/show.html.erb within layouts/application (Duration: 9.5ms | Allocations: 7235)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3481)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 224)
+Completed 200 OK in 17ms (Views: 11.6ms | ActiveRecord: 3.4ms | Allocations: 12514)
+
+
+Started GET "/flats/3/edit" for ::1 at 2020-09-04 13:02:50 +1200
+Processing by FlatsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:36:in `set_flat'
+  Rendering flats/edit.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 6.4ms | Allocations: 3868)
+  Rendered flats/edit.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3992)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3477)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.2ms | Allocations: 9141)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 13:02:51 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1072)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.6ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 262)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 5687)
+
+
+Started DELETE "/flats/3" for ::1 at 2020-09-04 13:02:53 +1200
+Processing by FlatsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8jdIG1+ZzYOsZLbTD1BJbURxsebdmBrsk6Y73Tp1XBgS08YPS3rga5PNlqbXB1mijPr7Yfg4zlHevzOrlMl1Ng==", "id"=>"3"}
+  [1m[36mFlat Load (0.1ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:36:in `set_flat'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flats_controller.rb:29:in `destroy'
+  [1m[36mFlat Destroy (0.5ms)[0m  [1m[31mDELETE FROM "flats" WHERE "flats"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/flats_controller.rb:29:in `destroy'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flats_controller.rb:29:in `destroy'
+Redirected to http://localhost:3000/flats
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms | Allocations: 3019)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 13:02:53 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 944)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.6ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 262)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 5559)
+
+
+Started GET "/flats/new" for ::1 at 2020-09-04 13:02:55 +1200
+Processing by FlatsController#new as HTML
+  Rendering flats/new.html.erb within layouts/application
+  Rendered flats/_form.html.erb (Duration: 5.7ms | Allocations: 3818)
+  Rendered flats/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3911)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.1ms | Allocations: 3477)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 262)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 8437)
+
+
+Started POST "/flats" for ::1 at 2020-09-04 13:03:07 +1200
+Processing by FlatsController#create as HTML
+  Parameters: {"authenticity_token"=>"NdIkmDT4dYub9EJgExbmVsp0OVGfG/m6XODEehCRNcReKxQCQiFS90QNJJ4AUAs7NUIyZ64hzoPw/JHYt6rDzQ==", "flat"=>{"title"=>"My New Flat", "address"=>"9128121323 Boulvard"}, "commit"=>"Create Flat"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flats_controller.rb:17:in `create'
+  [1m[36mFlat Create (0.2ms)[0m  [1m[32mINSERT INTO "flats" ("title", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "My New Flat"], ["address", "9128121323 Boulvard"], ["created_at", "2020-09-04 01:03:07.462421"], ["updated_at", "2020-09-04 01:03:07.462421"]]
+  ↳ app/controllers/flats_controller.rb:17:in `create'
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flats_controller.rb:17:in `create'
+Redirected to http://localhost:3000/flats
+Completed 302 Found in 9ms (ActiveRecord: 6.1ms | Allocations: 2892)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 13:03:07 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.8ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 262)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 5674)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 13:03:12 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 5856)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.2ms | Allocations: 3532)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 269)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 1.9ms | Allocations: 11160)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 13:03:33 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1042)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3832)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.2ms | Allocations: 196)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 570)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 7817)
+
+
+Started GET "/transactions/new" for ::1 at 2020-09-04 13:03:35 +1200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/_form.html.erb (Duration: 7.1ms | Allocations: 4362)
+  Rendered transactions/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 4710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 5.5ms | Allocations: 3478)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 268)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 9379)
+
+
+Started GET "/transactions/new" for ::1 at 2020-09-04 13:04:39 +1200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/_form.html.erb (Duration: 14.8ms | Allocations: 8936)
+  Rendered transactions/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 9280)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.8ms | Allocations: 3730)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 570)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 15969)
+
+
+Started GET "/transactions/new" for ::1 at 2020-09-04 13:05:57 +1200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/_form.html.erb (Duration: 5.2ms | Allocations: 4663)
+  Rendered transactions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 4988)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 6341)
+
+
+  
+ActionView::Template::Error (Association :flat_id not found):
+    1: <%= simple_form_for(transaction) do |f| %>
+    2:   <%= f.input :title %>
+    3:   <%= f.input :amount %>
+    4:   <%= f.association :flat_id, as: :select %>
+    5:   <%= f.submit %>
+    6: <% end %>
+  
+app/views/transactions/_form.html.erb:4
+app/views/transactions/_form.html.erb:1
+app/views/transactions/new.html.erb:3
+Started GET "/transactions/new" for ::1 at 2020-09-04 13:06:03 +1200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/transactions/_form.html.erb:4
+  Rendered transactions/_form.html.erb (Duration: 10.0ms | Allocations: 8213)
+  Rendered transactions/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 8558)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3731)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 570)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.2ms | Allocations: 15243)
+
+
+Started POST "/transactions" for ::1 at 2020-09-04 13:06:51 +1200
+Processing by TransactionsController#create as HTML
+  Parameters: {"authenticity_token"=>"xgZqWw+zvd88iIsN5RQ9zqsjWLdDqCpgwEQCKIZlLxMm4uRPG1CQNwMhq3g9Qy0BY6gSMGYI/t2NXQpeKNkGPQ==", "transaction"=>{"title"=>"Bacon", "amount"=>"9.10", "flat_id"=>"1"}, "commit"=>"Create Transaction"}
+[31mUnpermitted parameter: :flat_id[0m
+Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 0.0ms | Allocations: 2533)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist, Flat must exist):
+  
+app/controllers/transactions_controller.rb:16:in `create'
+Started POST "/transactions" for ::1 at 2020-09-04 13:07:46 +1200
+Processing by TransactionsController#create as HTML
+  Parameters: {"authenticity_token"=>"xgZqWw+zvd88iIsN5RQ9zqsjWLdDqCpgwEQCKIZlLxMm4uRPG1CQNwMhq3g9Qy0BY6gSMGYI/t2NXQpeKNkGPQ==", "transaction"=>{"title"=>"Bacon", "amount"=>"9.10", "flat_id"=>"1"}, "commit"=>"Create Transaction"}
+[31mUnpermitted parameter: :flat_id[0m
+Completed 422 Unprocessable Entity in 15ms (ActiveRecord: 2.8ms | Allocations: 11095)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist, Flat must exist):
+  
+app/controllers/transactions_controller.rb:17:in `create'
+Started PUT "/__web_console/repl_sessions/b2508d71861f76d7dc99d92bba0cc176" for ::1 at 2020-09-04 13:07:52 +1200
+Started PUT "/__web_console/repl_sessions/b2508d71861f76d7dc99d92bba0cc176" for ::1 at 2020-09-04 13:07:53 +1200
+Started PUT "/__web_console/repl_sessions/b2508d71861f76d7dc99d92bba0cc176" for ::1 at 2020-09-04 13:07:57 +1200
+Started GET "/users/sign_in" for ::1 at 2020-09-04 13:08:03 +1200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 773)
+  Rendered devise/shared/_form_wrap.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 3429)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 250)
+Completed 200 OK in 28ms (Views: 13.4ms | ActiveRecord: 2.2ms | Allocations: 19481)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-09-04 13:08:05 +1200
+Started GET "/users/auth/facebook" for ::1 at 2020-09-04 13:08:06 +1200
+Started GET "/users/auth/facebook/callback?code=AQB0nv4a3HUBwQr0k6aRu7J11CLowZDk-Sf1ERa53ax8Fg-ybdRU9zrmFkrRPN-2pWxPwjWx-fcm5K3VlZ0d8NKNEehnvuGx-jFO1OyUZgtKTtGwP55cC_ZCJ1jnLPFmu34mlwt2kq3uG2H5KZ8FNWMUFoNDFkH_XZJ-bowtHhGM5moloIDgTvxVDpt4mVMWLGQ2xts1bL6eJJZmGxkci03lLO_J6khvUlekjOM0iM4lqyTOOftiB8pD9-MqGCfnL1OR4PjgMVYwRx5XfYOxab8ktW95wNNRh9-GQOcSxwK1nY0dxIZWChDZAggCFCK3BOg5jOHgHZOXXRl_qsvFLR4N&state=9a837b094eff0bc36b631ead36ed197b2dd7a7813c4ccd82" for ::1 at 2020-09-04 13:08:06 +1200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQB0nv4a3HUBwQr0k6aRu7J11CLowZDk-Sf1ERa53ax8Fg-ybdRU9zrmFkrRPN-2pWxPwjWx-fcm5K3VlZ0d8NKNEehnvuGx-jFO1OyUZgtKTtGwP55cC_ZCJ1jnLPFmu34mlwt2kq3uG2H5KZ8FNWMUFoNDFkH_XZJ-bowtHhGM5moloIDgTvxVDpt4mVMWLGQ2xts1bL6eJJZmGxkci03lLO_J6khvUlekjOM0iM4lqyTOOftiB8pD9-MqGCfnL1OR4PjgMVYwRx5XfYOxab8ktW95wNNRh9-GQOcSxwK1nY0dxIZWChDZAggCFCK3BOg5jOHgHZOXXRl_qsvFLR4N", "state"=>"9a837b094eff0bc36b631ead36ed197b2dd7a7813c4ccd82"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "10158410573071259"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `from_omniauth'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:22:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "arie.theodorus.vanderpoel@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `from_omniauth'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "created_at", "updated_at", "provider", "uid", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "arie.theodorus.vanderpoel@gmail.com"], ["encrypted_password", "$2a$12$p4EpLqChJEP9a59BEsSf5OzwO4h3C07Hdv0EhMzY7TdJBgZU7L0vi"], ["first_name", "Arie"], ["last_name", "Van Der Poel"], ["created_at", "2020-09-04 01:08:08.125033"], ["updated_at", "2020-09-04 01:08:08.125033"], ["provider", "facebook"], ["uid", "10158410573071259"], ["image", "http://graph.facebook.com/v4.0/10158410573071259/picture"]]
+  ↳ app/models/user.rb:22:in `from_omniauth'
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:22:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 258ms (ActiveRecord: 6.7ms | Allocations: 6406)
+
+
+Started GET "/" for ::1 at 2020-09-04 13:08:08 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1168)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 6.9ms | Allocations: 3536)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 204)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms | Allocations: 6421)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 13:08:09 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1054)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 7.6ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 3.4ms | Allocations: 1177)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.5ms | Allocations: 6909)
+
+
+Started GET "/transactions/new" for ::1 at 2020-09-04 13:08:11 +1200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/transactions/_form.html.erb:4
+  Rendered transactions/_form.html.erb (Duration: 23.3ms | Allocations: 10941)
+  Rendered transactions/new.html.erb within layouts/application (Duration: 23.5ms | Allocations: 11034)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 7.1ms | Allocations: 3477)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 2.8ms | Allocations: 1171)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 2.5ms | Allocations: 16484)
+
+
+Started POST "/transactions" for ::1 at 2020-09-04 13:08:16 +1200
+Processing by TransactionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Mk1D24l5EewCO6IGzkrkuSnCxrUxXgU0Wi4xivXfLhTh8MUwZgYCMDpF/srkjipYVgqBv4eOT5T5boWoJPddEA==", "transaction"=>{"title"=>"Bacon", "amount"=>"9.10", "flat_id"=>"4"}, "commit"=>"Create Transaction"}
+[31mUnpermitted parameter: :flat_id[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.3ms | Allocations: 2402)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Flat must exist):
+  
+app/controllers/transactions_controller.rb:17:in `create'
+Started POST "/transactions" for ::1 at 2020-09-04 13:08:56 +1200
+Processing by TransactionsController#create as HTML
+  Parameters: {"authenticity_token"=>"grYkYEndT0bbnHrz4LtJ7qiqfKgKJ40ceCIHgR7QWa10oaowRyc1DLpkNTe8+Yy9MMVlH6CAAvBM7sCkOq8Znw==", "transaction"=>{"title"=>"Bacon", "amount"=>"9.10", "flat_id"=>"1"}, "commit"=>"Create Transaction"}
+[31mUnpermitted parameter: :flat_id[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 4.7ms | Allocations: 18667)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/transactions_controller.rb:40:in `transaction_params'
+app/controllers/transactions_controller.rb:17:in `create'
+Started POST "/transactions" for ::1 at 2020-09-04 13:09:12 +1200
+Processing by TransactionsController#create as HTML
+  Parameters: {"authenticity_token"=>"grYkYEndT0bbnHrz4LtJ7qiqfKgKJ40ceCIHgR7QWa10oaowRyc1DLpkNTe8+Yy9MMVlH6CAAvBM7sCkOq8Znw==", "transaction"=>{"title"=>"Bacon", "amount"=>"9.10", "flat_id"=>"1"}, "commit"=>"Create Transaction"}
+[31mUnpermitted parameter: :flat_id[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:16:in `create'
+[31mUnpermitted parameter: :flat_id[0m
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 4.7ms | Allocations: 20845)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Flat(#70286630088800) expected, got #<Transaction id: nil, title: nil, amount: nil, date: nil, user_id: nil, flat_id: nil, created_at: nil, updated_at: nil> which is an instance of Transaction(#70286658645740)):
+  
+app/controllers/transactions_controller.rb:17:in `create'
+Started PUT "/__web_console/repl_sessions/67d7e62373714d616110350054a599dc" for ::1 at 2020-09-04 13:09:17 +1200
+Started PUT "/__web_console/repl_sessions/67d7e62373714d616110350054a599dc" for ::1 at 2020-09-04 13:09:22 +1200
+Started PUT "/__web_console/repl_sessions/67d7e62373714d616110350054a599dc" for ::1 at 2020-09-04 13:09:27 +1200
+[31mUnpermitted parameter: :flat_id[0m
+Started GET "/transactions/new" for ::1 at 2020-09-04 13:09:34 +1200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/transactions/_form.html.erb:4
+  Rendered transactions/_form.html.erb (Duration: 18.6ms | Allocations: 13055)
+  Rendered transactions/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 13148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.7ms | Allocations: 3479)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 14.7ms | Allocations: 11114)
+Completed 200 OK in 53ms (Views: 35.2ms | ActiveRecord: 7.4ms | Allocations: 35349)
+
+
+Started POST "/transactions" for ::1 at 2020-09-04 13:09:40 +1200
+Processing by TransactionsController#create as HTML
+  Parameters: {"authenticity_token"=>"JMYK2g8JF4+ovs4OCBdwxBiP6ELbpjVeKh5bGiB+mcHS0YSKAfNtxclGgcpUVbWXgODx9XEBurIe0pw/BAHZ8w==", "transaction"=>{"title"=>"Bacon", "amount"=>"9.10", "flat_id"=>"1"}, "commit"=>"Create Transaction"}
+[31mUnpermitted parameter: :flat_id[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:16:in `create'
+[31mUnpermitted parameter: :flat_id[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 2272)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Flat(#70286614836940) expected, got #<Transaction id: nil, title: nil, amount: nil, date: nil, user_id: nil, flat_id: nil, created_at: nil, updated_at: nil> which is an instance of Transaction(#70286625117920)):
+  
+app/controllers/transactions_controller.rb:17:in `create'
+Started PUT "/__web_console/repl_sessions/f280cd04114849d1de496345164eb5bd" for ::1 at 2020-09-04 13:09:48 +1200
+Started PUT "/__web_console/repl_sessions/f280cd04114849d1de496345164eb5bd" for ::1 at 2020-09-04 13:09:49 +1200
+[31mUnpermitted parameter: :flat_id[0m
+Started POST "/transactions" for ::1 at 2020-09-04 13:10:03 +1200
+Processing by TransactionsController#create as HTML
+  Parameters: {"authenticity_token"=>"JMYK2g8JF4+ovs4OCBdwxBiP6ELbpjVeKh5bGiB+mcHS0YSKAfNtxclGgcpUVbWXgODx9XEBurIe0pw/BAHZ8w==", "transaction"=>{"title"=>"Bacon", "amount"=>"9.10", "flat_id"=>"1"}, "commit"=>"Create Transaction"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 4.7ms | Allocations: 20757)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Flat(#70286658778080) expected, got #<Transaction id: nil, title: nil, amount: nil, date: nil, user_id: nil, flat_id: nil, created_at: nil, updated_at: nil> which is an instance of Transaction(#70286631334760)):
+  
+app/controllers/transactions_controller.rb:17:in `create'
+Started PUT "/__web_console/repl_sessions/9c8cb4ff5b05699eef2b654789209f9a" for ::1 at 2020-09-04 13:10:06 +1200
+Started PUT "/__web_console/repl_sessions/9c8cb4ff5b05699eef2b654789209f9a" for ::1 at 2020-09-04 13:10:06 +1200
+Started POST "/transactions" for ::1 at 2020-09-04 13:10:29 +1200
+Processing by TransactionsController#create as HTML
+  Parameters: {"authenticity_token"=>"JMYK2g8JF4+ovs4OCBdwxBiP6ELbpjVeKh5bGiB+mcHS0YSKAfNtxclGgcpUVbWXgODx9XEBurIe0pw/BAHZ8w==", "transaction"=>{"title"=>"Bacon", "amount"=>"9.10", "flat_id"=>"1"}, "commit"=>"Create Transaction"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:16:in `create'
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:17:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:18:in `create'
+  [1m[36mTransaction Create (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("title", "amount", "user_id", "flat_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Bacon"], ["amount", "9.10"], ["user_id", 2], ["flat_id", 1], ["created_at", "2020-09-04 01:10:29.982273"], ["updated_at", "2020-09-04 01:10:29.982273"]]
+  ↳ app/controllers/transactions_controller.rb:18:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:18:in `create'
+Redirected to http://localhost:3000/transactions
+Completed 302 Found in 39ms (ActiveRecord: 8.0ms | Allocations: 26845)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 13:10:29 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1005)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3581)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1179)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.4ms | Allocations: 6707)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 13:10:35 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1364)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.1ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.8ms | Allocations: 1176)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.4ms | Allocations: 7639)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 13:10:38 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:36:in `set_flat'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:37:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:7
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:14
+  Rendered flats/show.html.erb within layouts/application (Duration: 7.4ms | Allocations: 6148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.7ms | Allocations: 3481)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 203)
+Completed 200 OK in 16ms (Views: 10.7ms | ActiveRecord: 1.7ms | Allocations: 12356)
+
+
+Started GET "/groups" for ::1 at 2020-09-04 13:10:50 +1200
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  Rendered groups/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3992)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 15.2ms | Allocations: 3583)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1178)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 1.6ms | Allocations: 10261)
+
+
+Started GET "/groups/1" for ::1 at 2020-09-04 13:10:52 +1200
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:35:in `set_group'
+  Rendering groups/show.html.erb within layouts/application
+  Rendered groups/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 212)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.3ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1175)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.4ms | Allocations: 6573)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 13:10:53 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1080)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 6.5ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.8ms | Allocations: 1176)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.4ms | Allocations: 6616)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 13:10:55 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:13
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 946)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.9ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1176)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.5ms | Allocations: 6476)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 13:13:02 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:6
+  Rendered transactions/index.html.erb within layouts/application (Duration: 330.6ms | Allocations: 176285)
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 0.3ms | Allocations: 177652)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `flat' for #<#<Class:0x00007fd9c2015ec0>:0x00007fd9c219e2b0>
+Did you mean?  Float):
+     8:   <h2><%= t.title %></h2>
+     9:   <h2><%= t.amount %></h2>
+    10:   <tr>
+    11:     <td><%= link_to 'Show', flat %></td>
+    12:     <td><%= link_to 'Edit', edit_flat_path(flat) %></td>
+    13:     <td><%= link_to 'Destroy', flat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    14:   </tr>
+  
+app/views/transactions/index.html.erb:11
+app/views/transactions/index.html.erb:6
+Started GET "/transactions" for ::1 at 2020-09-04 13:13:13 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:6
+  Rendered transactions/index.html.erb within layouts/application (Duration: 143.2ms | Allocations: 90235)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.3ms | Allocations: 91599)
+
+
+  
+ActionView::Template::Error (undefined method `edit_t_path' for #<#<Class:0x00007fd9c68e58f8>:0x00007fd9c68f4d08>
+Did you mean?  edit_flat_path):
+     9:   <h2><%= t.amount %></h2>
+    10:   <tr>
+    11:     <td><%= link_to 'Show', t %></td>
+    12:     <td><%= link_to 'Edit', edit_t_path(t) %></td>
+    13:     <td><%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    14:   </tr>
+    15:   <br>
+  
+app/views/transactions/index.html.erb:12
+app/views/transactions/index.html.erb:6
+Started GET "/transactions" for ::1 at 2020-09-04 13:13:37 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:6
+  Rendered transactions/index.html.erb within layouts/application (Duration: 147.0ms | Allocations: 90239)
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 0.3ms | Allocations: 91603)
+
+
+  
+ActionView::Template::Error (undefined method `edit_t_path' for #<#<Class:0x00007fd9c34b1500>:0x00007fd9c34b6e10>
+Did you mean?  edit_flat_path):
+     9:   <h2><%= t.amount %></h2>
+    10:   <tr>
+    11:     <td><%= link_to 'Show', t %></td>
+    12:     <td><%= link_to 'Edit', edit_t_path(t) %></td>
+    13:     <td><%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    14:   </tr>
+    15:   <br>
+  
+app/views/transactions/index.html.erb:12
+app/views/transactions/index.html.erb:6
+Started PUT "/__web_console/repl_sessions/4d92bf7e5788caec7abbb611ff2adb4e" for ::1 at 2020-09-04 13:13:58 +1200
+Started GET "/transactions" for ::1 at 2020-09-04 13:14:10 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:6
+  Rendered transactions/index.html.erb within layouts/application (Duration: 153.9ms | Allocations: 90283)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 0.3ms | Allocations: 91650)
+
+
+  
+ActionView::Template::Error (undefined method `edit_transation_path' for #<#<Class:0x00007fd9c1526078>:0x00007fd9c1524408>
+Did you mean?  edit_transaction_path
+               edit_transaction_url
+               new_transaction_path):
+     9:   <h2><%= t.amount %></h2>
+    10:   <tr>
+    11:     <td><%= link_to 'Show', t %></td>
+    12:     <td><%= link_to 'Edit', edit_transation_path(t) %></td>
+    13:     <td><%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    14:   </tr>
+    15:   <br>
+  
+app/views/transactions/index.html.erb:12
+app/views/transactions/index.html.erb:6
+Started GET "/transactions" for ::1 at 2020-09-04 13:14:15 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:6
+  Rendered transactions/index.html.erb within layouts/application (Duration: 150.4ms | Allocations: 90272)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.3ms | Allocations: 91636)
+
+
+  
+ActionView::Template::Error (undefined method `edit_transations_path' for #<#<Class:0x00007fd9c2a342f8>:0x00007fd9c2a0dcc0>
+Did you mean?  edit_transaction_path
+               edit_transaction_url):
+     9:   <h2><%= t.amount %></h2>
+    10:   <tr>
+    11:     <td><%= link_to 'Show', t %></td>
+    12:     <td><%= link_to 'Edit', edit_transations_path(t) %></td>
+    13:     <td><%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    14:   </tr>
+    15:   <br>
+  
+app/views/transactions/index.html.erb:12
+app/views/transactions/index.html.erb:6
+Started GET "/transactions" for ::1 at 2020-09-04 13:14:20 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:6
+  Rendered transactions/index.html.erb within layouts/application (Duration: 154.4ms | Allocations: 90281)
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 0.3ms | Allocations: 91645)
+
+
+  
+ActionView::Template::Error (undefined method `edit_transation_path' for #<#<Class:0x00007fd9c1653ba8>:0x00007fd9c1667748>
+Did you mean?  edit_transaction_path
+               edit_transaction_url
+               new_transaction_path):
+     9:   <h2><%= t.amount %></h2>
+    10:   <tr>
+    11:     <td><%= link_to 'Show', t %></td>
+    12:     <td><%= link_to 'Edit', edit_transation_path(t) %></td>
+    13:     <td><%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    14:   </tr>
+    15:   <br>
+  
+app/views/transactions/index.html.erb:12
+app/views/transactions/index.html.erb:6
+Started GET "/transactions" for ::1 at 2020-09-04 13:14:27 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:6
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1187)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.6ms | Allocations: 3833)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 196)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 2.2ms | Allocations: 1477)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.5ms | Allocations: 8877)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 13:14:38 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:5
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 13.4ms | Allocations: 3833)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.3ms | Allocations: 201)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 2.0ms | Allocations: 1479)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.5ms | Allocations: 8885)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 13:14:44 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.5ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.8ms | Allocations: 1176)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.5ms | Allocations: 7518)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 13:14:45 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:5
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 958)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.9ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.5ms | Allocations: 1176)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.5ms | Allocations: 6488)
+
+
+Started GET "/groups" for ::1 at 2020-09-04 13:14:46 +1200
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1034)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.7ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.5ms | Allocations: 1176)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.4ms | Allocations: 7222)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 13:14:47 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1080)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.0ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1176)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms | Allocations: 6630)
+
+
+Started GET "/" for ::1 at 2020-09-04 13:14:47 +1200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1147)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.6ms | Allocations: 3531)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 203)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 6371)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 13:14:49 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1080)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.9ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1176)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.4ms | Allocations: 6620)
+
+
+Started GET "/flats/1" for ::1 at 2020-09-04 13:14:52 +1200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:36:in `set_flat'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:37:in `set_flat'
+  Rendering flats/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "groups" ON "users"."id" = "groups"."user_id" WHERE "groups"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:7
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."flat_id" = $1[0m  [["flat_id", 1]]
+  ↳ app/views/flats/show.html.erb:14
+  Rendered flats/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.9ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 203)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.7ms | Allocations: 8419)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 13:15:14 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:5
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 958)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.4ms | Allocations: 3582)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 12.3ms | Allocations: 1176)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.4ms | Allocations: 6495)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 13:15:15 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1074)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 3.9ms | Allocations: 3580)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1169)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.4ms | Allocations: 6611)
+
+
+Started GET "/transactions" for ::1 at 2020-09-04 13:15:25 +1200
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:5
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 949)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.6ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1169)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.5ms | Allocations: 6486)
+
+
+Started GET "/flats" for ::1 at 2020-09-04 13:15:27 +1200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:4
+  Rendered flats/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_head.html.erb (Duration: 4.1ms | Allocations: 3579)
+  Rendered shared/_flash_notice.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1169)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms | Allocations: 6592)
+
+

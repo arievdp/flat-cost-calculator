@@ -1,17 +1,5 @@
-<%= form_with(model: flat, local: true) do |form| %>
-  <% if flat.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(flat.errors.count, "error") %> prohibited this flat from being saved:</h2>
-
-      <ul>
-        <% flat.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<%= simple_form_for(flat) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :address %>
+  <%= f.submit %>
 <% end %>

@@ -13,6 +13,7 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.new(flat_params)
+    @group = Group.new
     @flat.save!
     redirect_to flats_path
   end
@@ -33,6 +34,7 @@ class FlatsController < ApplicationController
 
   def set_flat
     @flat = Flat.find(params[:id])
+    @user = current_user
   end
 
   def flat_params
