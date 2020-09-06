@@ -8,6 +8,8 @@ require 'sidekiq/web'
   resources :groups
   resources :transactions
   resources :flats
+  resources :invitations
+  get '/:invitation/:token', to: 'invitations#show'
 
   # devise_for :users
   devise_for :users, controllers: {

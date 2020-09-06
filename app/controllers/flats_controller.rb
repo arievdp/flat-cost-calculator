@@ -5,7 +5,8 @@ class FlatsController < ApplicationController
     @flats = Flat.all
   end
 
-  def show; end
+  def show
+  end
 
   def new
     @flat = Flat.new
