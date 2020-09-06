@@ -5,5 +5,9 @@ class Flat < ApplicationRecord
   has_many :transactions
   has_many :invitations
   accepts_nested_attributes_for :users
+  before_create :set_balance
 
+  def set_balance
+    self.balance ||= 0.0
+  end
 end

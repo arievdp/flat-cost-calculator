@@ -6,6 +6,8 @@ class FlatsController < ApplicationController
   end
 
   def show
+    @invitation = @flat.invitations.where(invited_by: current_user).last
+    @balance_per_flatmate = @flat.balance / @flat.users.count
   end
 
   def new
@@ -13,10 +15,13 @@ class FlatsController < ApplicationController
   end
 
   def create
-    @flat = Flat.new(flat_params)
-    @group = Group.new
+    @flat = Flat.new(flat_params.slice(:title, :address))
     @flat.save!
-    redirect_to flats_path
+    @group = Group.new
+    @group.user = User.find(flat_params[:user_id])
+    @group.flat = @flat
+    @group.save!
+    redirect_to flat_path(@flat)
   end
 
   def edit; end
@@ -40,6 +45,6 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:title, :address, user_ids: [])
+    params.require(:flat).permit(:title, :address, :user_id)
   end
 end

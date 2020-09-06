@@ -1,3 +1,8 @@
-<p>You were invited by <%= @invited_by.first_name %> to "<%= @invitation.flat.title %>"</p>
-<p>Accept this invitation?</p>
-
+<div class="w-full max-w-md mx-auto my-8">
+  <div class="bg-white border border-gray-300 rounded-lg px-8 pt-6 pb-4">
+    <p>You were invited by <%= @invited_by.first_name %> to "<%= @invitation.flat.title %>"</p>
+    <%= link_to 'Accept invitation', groups_path(group: {user_id: current_user.id, flat_id: @invitation.flat}), method: :post, class:"btn btn-default" %>
+    <br>
+    <%= link_to 'Decline invitation', root_path, class:"btn btn-default" %>
+  </div>
+</div>

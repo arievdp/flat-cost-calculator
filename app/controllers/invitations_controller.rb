@@ -8,8 +8,12 @@ class InvitationsController < ApplicationController
   end
 
   def show
-    # @invitation = Invitation.find_by(token: invitation_params[:token])
-    @invited_by = User.find(@invitation.invited_by)
+    if @invitation.flat.user_ids.include?(current_user.id)
+      flash[:notice] = 'You are already a part of this flat'
+      redirect_to flat_path(@invitation.flat_id)
+    else
+      @invited_by = User.find(@invitation.invited_by)
+    end
   end
 
   private

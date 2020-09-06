@@ -1,6 +1,9 @@
-<p id="notice"><%= notice %></p>
 <section class="text-gray-700 body-font">
-  <div class="container px-5 py-12 mx-auto">
+  <div class="px-5 py-12 mx-auto">
+    <div class="flex flex-wrap w-full mb-20 items-center text-center justify-center">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mr-10">My Flats</h1>
+      <%= link_to 'Add New', new_flat_path, class:"text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" %>
+    </div>
     <div class="flex flex-wrap -m-4">
       <% @flats.each do |flat| %>
         <%= render 'shared/flat-card', flat: flat %>

@@ -6,8 +6,21 @@
         <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="<%= user.image %>">
     <% end %>
     <div class="flex-grow">
-      <h2 class="text-gray-900 title-font font-medium"><%= user.name %></h2>
-      <p class="text-gray-500">$94.10</p>
+      <h2 class="text-gray-900 title-font font-medium "><%= user.name %></h2>
+      <% sum = 0 %>
+      <% user.transactions.where(flat_id: flat.id).each do |t| %>
+        <% sum += t.amount %>
+      <% end %>
+      <% bal = (balance_per_flatmate - sum).round(2) %>
+      <% if bal.positive? %>
+        <span class="px-2 inline-flex leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+          $<%= bal %>
+        </span>
+      <% else %>
+        <span class="px-2 inline-flex leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+          $<%= bal %>
+        </span>
+      <% end %>
     </div>
   </div>
 </div>

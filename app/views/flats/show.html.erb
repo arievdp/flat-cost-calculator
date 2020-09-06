@@ -1,11 +1,14 @@
-<p id="notice"><%= notice %></p>
 <section class="text-gray-700 body-font">
   <div class="py-6">
     <div class="flex flex-col text-center w-full mb-10">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"><%= @flat.title %></h1>
       <h3 class="mb-4 text-gray-900"><%= @flat.address %></h3>
-        <%= link_to 'Share', new_invitation_path(invitation: {invited_by: current_user.id, flat_id: @flat}) %>
-      <h3 class="mb-4 text-gray-900">Share: <%= request.original_url %>/<%= @flat.invitation_token %></h3>
+      <h3 class="mb-4 text-gray-900">Balance: $<%= @flat.balance %></h3>
+        <% if @invitation.present? %>
+          <h3 class="mb-4 text-gray-900">Share: <%= request.base_url %>/invitations/<%= @invitation.token %></h3>
+        <% else %>
+            <%= link_to 'Generate sharing link', new_invitation_path(invitation: {invited_by: current_user.id, flat_id: @flat}) %>
+        <% end %>
       <div>
         <%= link_to 'Edit', edit_flat_path(@flat) %> |
         <%= link_to 'Back', flats_path %>
@@ -13,7 +16,7 @@
     </div>
     <div class="flex flex-wrap -m-2">
       <% @flat.users.each do |user| %>
-        <%= render 'shared/flatmate-card', user: user %>
+        <%= render 'shared/flatmate-card', user: user, flat: @flat, balance_per_flatmate: @balance_per_flatmate %>
       <% end %>
     </div>
   </div>
