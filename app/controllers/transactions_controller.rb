@@ -13,9 +13,16 @@ class TransactionsController < ApplicationController
 
   def create
     @transaction = Transaction.new(transaction_params)
+    @flat = Flat.find(transaction_params[:flat_id])
+    @transaction.flat = @flat
     @transaction.user = current_user
-    @transaction.flat = Flat.find(transaction_params[:flat_id])
+    if @transaction.category == 'Payment'
+      @flat.balance -= @transaction.amount
+    else
+      @flat.balance += @transaction.amount
+    end
     @transaction.save!
+    @flat.save!
     redirect_to flat_path(transaction_params[:flat_id])
   end
 

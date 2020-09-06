@@ -14,7 +14,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     @group.save!
-    redirect_to groups_path
+    redirect_to flat_path(group_params[:flat_id])
   end
 
   def edit; end

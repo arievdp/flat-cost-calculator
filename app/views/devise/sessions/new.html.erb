@@ -19,6 +19,8 @@
       <% end -%>
     </div>
 
+    <%= f.hidden_field( :invitation_token, value: params[:invitation_token], name: 'invitation_token' ) if params[:invitation_token] %>
+
     <div class="input-group">
       <%= f.submit "Log in", class: "btn btn-default" %>
     </div>

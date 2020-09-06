@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_03_234334) do
+ActiveRecord::Schema.define(version: 2020_09_06_063525) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 2020_09_03_234334) do
     t.string "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "invitation_token"
+    t.integer "invited_by"
+    t.float "balance"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -42,14 +45,24 @@ ActiveRecord::Schema.define(version: 2020_09_03_234334) do
     t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
+  create_table "invitations", force: :cascade do |t|
+    t.string "token"
+    t.integer "invited_by"
+    t.bigint "flat_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["flat_id"], name: "index_invitations_on_flat_id"
+  end
+
   create_table "transactions", force: :cascade do |t|
     t.string "title"
-    t.string "amount"
+    t.float "amount"
     t.datetime "date"
     t.bigint "user_id", null: false
     t.bigint "flat_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "category"
     t.index ["flat_id"], name: "index_transactions_on_flat_id"
     t.index ["user_id"], name: "index_transactions_on_user_id"
   end
@@ -75,6 +88,7 @@ ActiveRecord::Schema.define(version: 2020_09_03_234334) do
 
   add_foreign_key "groups", "flats"
   add_foreign_key "groups", "users"
+  add_foreign_key "invitations", "flats"
   add_foreign_key "transactions", "flats"
   add_foreign_key "transactions", "users"
 end

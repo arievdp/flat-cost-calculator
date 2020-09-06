@@ -1,5 +1,4 @@
 <% content_for :devise_form do %>
-
   <h2 class="pt-4 mb-8 text-4xl font-bold heading">Sign up</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -29,6 +28,10 @@
       <%= f.label :password_confirmation, class:"label" %>
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input" %>
     </div>
+
+    <%= f.hidden_field( :invitation_token, value: params[:invitation_token], name: 'token' ) if params[:invitation_token]
+
+ %>
 
     <div class="input-group">
       <%= f.submit "Sign up", class: "btn btn-default" %>
