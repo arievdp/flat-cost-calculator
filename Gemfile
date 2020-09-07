@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -48,6 +49,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'dotenv-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -59,4 +61,3 @@ gem 'sidekiq', '~> 6.1', '>= 6.1.1'
 gem 'name_of_person', '~> 1.1', '>= 1.1.1'
 gem 'omniauth-facebook'
 gem 'simple_form'
-gem 'dotenv-rails', groups: [:development, :test]
