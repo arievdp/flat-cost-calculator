@@ -1,13 +1,12 @@
 # Flat Splitter
 
-A personal project to split housing costs between flatmates.
+A personal project (work in progress) that splits housing costs between flatmates.
 
 Flat Splitter uses:
 - Ruby on Rails
 - Tailwind CSS
 - Devise for authentication
 - Omniauth for social logins
-
 
 ## Installation
 This app needs Ruby version 2.6.6 on your computer. If you need help with installing Ruby using `rbenv`, you can follow this [guide](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04#step-1-%E2%80%93-install-rbenv-and-dependencies).
@@ -16,10 +15,10 @@ This app needs Ruby version 2.6.6 on your computer. If you need help with instal
 
 ```bash
 # clone the repo
-git clone git@github.com:erik-trantt/govhack-2020.git
+git clone git@github.com:arievdp/flat-cost-calculator.git
 
 # install dependencies
-cd govhack-2020
+cd flat-cost-calculator
 bundle install
 yarn install --check-files
 
@@ -38,7 +37,3 @@ rails server
 # alternatively, can use this shortcut
 rails s
 ```
-
-
-
-&#169; 2020 Gone With The Win
