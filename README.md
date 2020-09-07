@@ -1,6 +1,6 @@
 # Flat Splitter
 
-A personal project (work in progress) that splits housing costs between flatmates.
+A personal project (work in progress) that splits housing costs between flatmates. I built this over a weekend to experiment with Tailwind CSS and social link sharing.
 
 Flat Splitter uses:
 - Ruby on Rails
