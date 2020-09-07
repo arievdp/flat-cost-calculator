@@ -15,4 +15,18 @@
   <%= stylesheet_pack_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag  'application', 'data-turbolinks-track': 'reload' %>
   <%#= javascript_include_tag 'https://js.stripe.com/v3/', 'data-turbolinks-track': 'reload' %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" charset="utf-8"></script>
+  <script>
+    function openDropdown(event,dropdownID){
+      let element = event.target;
+      while(element.nodeName !== "BUTTON"){
+        element = element.parentNode;
+      }
+      var popper = new Popper(element, document.getElementById(dropdownID), {
+        placement: 'top-end'
+      });
+      document.getElementById(dropdownID).classList.toggle("hidden");
+      document.getElementById(dropdownID).classList.toggle("block");
+    }
+  </script>
 </head>
