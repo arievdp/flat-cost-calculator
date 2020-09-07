@@ -59,3 +59,4 @@ gem 'sidekiq', '~> 6.1', '>= 6.1.1'
 gem 'name_of_person', '~> 1.1', '>= 1.1.1'
 gem 'omniauth-facebook'
 gem 'simple_form'
+gem 'dotenv-rails', groups: [:development, :test]

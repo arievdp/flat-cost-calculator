@@ -2,7 +2,7 @@ class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
 
   def index
-    @flats = Flat.all
+    @flats = Flat.select { |f| f.users.include?(current_user) }
   end
 
   def show
@@ -10,10 +10,10 @@ class FlatsController < ApplicationController
     transactions = []
     @flat.transactions.each { |t| transactions << t.amount }
     @transactions_total = transactions.inject(:+)
+    @transactions_total = 0 if @transactions_total.nil?
     users = @flat.users
     n_flatmates = users.count
     balance_per_flatmate = @transactions_total / n_flatmates
-
 
     users.each do |u|
       u.balance = (balance_per_flatmate - u.calculate_balance(@flat.id))
