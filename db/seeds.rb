@@ -6,27 +6,25 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-p 'Creating 2 users'
-p '________________'
-
-User.create!(
-  name: 'Flatmate 1',
-  email: 'test1@test.com',
-  password: '123456'
-  )
-
-User.create!(
-  name: 'Flatmate 2',
-  email: 'test2@test.com',
-  password: '123456'
-  )
-
-p 'Done!'
-p 'Creating 4 flats'
+p 'Creating 4 users'
 p '________________'
 
 n = 1
 4.times do
+  User.create!(
+    name: "Flatmate #{n}",
+    email: "test#{n}@test.com",
+    password: '123456'
+    )
+  n += 1
+end
+
+p 'Done!'
+p 'Creating 3 flats'
+p '________________'
+
+n = 1
+3.times do
   Flat.create!(
     title: "Test Flat #{n}",
     address: "Test address #{n}, Auckland"
@@ -35,7 +33,7 @@ n = 1
 end
 
 p 'Done!'
-p 'Creating 10 Transactions'
+p 'Creating 20 Transactions'
 p '________________'
 
 title_array = [
@@ -45,10 +43,11 @@ title_array = [
   'groceries',
   'washing powder',
   'electricity bill',
-  'internet'
+  'internet',
+  'rent'
 ]
 
-10.times do
+20.times do
   u = User.all.sample
   f = Flat.all.sample
   amount = rand(1.0...100.0).round(2)
@@ -65,14 +64,16 @@ title_array = [
 end
 
 p 'Done!'
-p 'Creating 4 groups'
+p 'Creating groups'
 p '________________'
 
-g = Group.new
-
-4.times do
-  g.user = User.all.sample
-  g.flat = Flat.all.sample
-  g.save!
+User.all.each do |u|
+  Flat.all.each do |f|
+    g = Group.new
+    g.user = u
+    g.flat = f
+    g.save!
+  end
 end
 
+p 'Done!'

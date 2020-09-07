@@ -1,14 +1,16 @@
 class User < ApplicationRecord
-has_person_name
-has_many :groups
-has_many :flats, through: :groups
-has_many :transactions
+  has_person_name
+  has_many :groups
+  has_many :flats, through: :groups
+  has_many :transactions
+  attr_accessor :calculate_balance
+  attr_accessor :balance
 
-# Include default devise modules. Others available are:
-# :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-devise :database_authenticatable, :registerable,
-        :recoverable, :rememberable, :validatable,
-        :omniauthable, :omniauth_providers => [:facebook]
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+          :recoverable, :rememberable, :validatable,
+          :omniauthable, :omniauth_providers => [:facebook]
 
   def self.new_with_session(params, session)
     super.tap do |user|
@@ -25,5 +27,13 @@ devise :database_authenticatable, :registerable,
       user.name = auth.info.name # assuming the user model has a name
       user.image = auth.info.image # assuming the user model has an image
     end
+  end
+
+  def calculate_balance(flat_id)
+    sum = 0
+    transactions.where(flat_id: flat_id).each do |t|
+      sum += t.amount
+    end
+    sum
   end
 end

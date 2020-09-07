@@ -7,18 +7,13 @@
     <% end %>
     <div class="flex-grow">
       <h2 class="text-gray-900 title-font font-medium "><%= user.name %></h2>
-      <% sum = 0 %>
-      <% user.transactions.where(flat_id: flat.id).each do |t| %>
-        <% sum += t.amount %>
-      <% end %>
-      <% bal = (balance_per_flatmate - sum).round(2) %>
-      <% if bal.positive? %>
+      <% if user.balance.positive? %>
         <span class="px-2 inline-flex leading-5 font-semibold rounded-full bg-red-100 text-red-800">
-          $<%= bal %>
+          $<%= user.balance.round(2) %>
         </span>
       <% else %>
         <span class="px-2 inline-flex leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-          $<%= bal %>
+          $<%= user.balance.round(2) %>
         </span>
       <% end %>
     </div>
