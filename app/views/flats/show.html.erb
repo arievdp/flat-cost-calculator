@@ -3,7 +3,7 @@
     <div class="flex flex-col text-center w-full mb-10">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"><%= @flat.title %></h1>
       <h3 class="mb-4 text-gray-900"><%= @flat.address %></h3>
-      <h3 class="mb-4 text-gray-900">Balance: $<%= @flat.balance %></h3>
+      <h3 class="mb-4 text-gray-900">Balance: $<%= @transactions_total.round(2) %></h3>
         <% if @invitation.present? %>
           <h3 class="mb-4 text-gray-900">Share: <%= request.base_url %>/invitations/<%= @invitation.token %></h3>
         <% else %>
@@ -53,7 +53,6 @@
             <% @flat.transactions.each do |t| %>
               <%= render 'shared/transaction-card', t: t %>
             <% end %>
-            <!-- More rows... -->
           </tbody>
         </table>
       </div>

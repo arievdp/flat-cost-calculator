@@ -7,7 +7,38 @@ class FlatsController < ApplicationController
 
   def show
     @invitation = @flat.invitations.where(invited_by: current_user).last
-    @balance_per_flatmate = @flat.balance / @flat.users.count
+    transactions = []
+    @flat.transactions.each { |t| transactions << t.amount }
+    @transactions_total = transactions.inject(:+)
+    users = @flat.users
+    n_flatmates = users.count
+    balance_per_flatmate = @transactions_total / n_flatmates
+
+
+    users.each do |u|
+      u.balance = (balance_per_flatmate - u.calculate_balance(@flat.id))
+    end
+
+    sorted_users = users.sort_by(&:balance)
+    sum = 0
+    # sorted_users.each do |u|
+    #   break if sorted_users.select { |ub| ub.balance.negative? }.count.zero?
+
+    #   if u == sorted_users.first && u.balance.negative?
+    #     sum = (u.balance / (n_flatmates - 1))
+    #     u.balance = 0
+    #     sorted_users.each do |ub|
+    #       (ub.balance += -sum) if ub != u
+    #     end
+    #   elsif u.balance.negative?
+    #     positive_users = sorted_users.select { |ub| ub.balance >= 0 }
+    #     sum = (u.balance / positive_users.count)
+    #     u.balance = 0
+    #     positive_users.each do |ub|
+    #       ub.balance += -sum
+    #     end
+    #   end
+    # end
   end
 
   def new
@@ -47,4 +78,5 @@ class FlatsController < ApplicationController
   def flat_params
     params.require(:flat).permit(:title, :address, :user_id)
   end
+
 end

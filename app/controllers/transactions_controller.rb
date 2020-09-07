@@ -29,8 +29,8 @@ class TransactionsController < ApplicationController
   def edit; end
 
   def update
-    @transaction.update(transaction_params)
-    redirect_to transaction_path(@transaction)
+    @transaction.update(transaction_params.slice(:title, :amount))
+    redirect_to flat_path(@transaction.flat_id)
   end
 
   def destroy
@@ -45,6 +45,13 @@ class TransactionsController < ApplicationController
   end
 
   def transaction_params
-    params.require(:transaction).permit(:title, :amount, :flat_id)
+    params.require(:transaction).permit(:id, :title, :amount, :flat_id)
   end
+
+  def rich_poor_balance
+    User.all.each do |u|
+
+    end
+  end
+
 end
