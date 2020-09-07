@@ -2,6 +2,8 @@
 
 A personal project (work in progress) that splits housing costs between flatmates. I built this over a weekend to experiment with Tailwind CSS and social link sharing.
 
+url: https://flat-splitter.herokuapp.com/
+
 Flat Splitter uses:
 - Ruby on Rails
 - Tailwind CSS
