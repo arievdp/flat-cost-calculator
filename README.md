@@ -1,24 +1,44 @@
-# README
+# Flat Splitter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A personal project to split housing costs between flatmates.
 
-Things you may want to cover:
+Flat Splitter uses:
+- Ruby on Rails
+- Tailwind CSS
+- Devise for authentication
+- Omniauth for social logins
 
-* Ruby version
 
-* System dependencies
+## Installation
+This app needs Ruby version 2.6.6 on your computer. If you need help with installing Ruby using `rbenv`, you can follow this [guide](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04#step-1-%E2%80%93-install-rbenv-and-dependencies).
 
-* Configuration
+## Setup
 
-* Database creation
+```bash
+# clone the repo
+git clone git@github.com:erik-trantt/govhack-2020.git
 
-* Database initialization
+# install dependencies
+cd govhack-2020
+bundle install
+yarn install --check-files
 
-* How to run the test suite
+# run app for first time
+rails db:migrate db:create
 
-* Services (job queues, cache servers, search engines, etc.)
+# populate sample data
+rails db:seed
+```
 
-* Deployment instructions
+## Run the app
+```bash
+# starting the server
+rails server
 
-* ...
+# alternatively, can use this shortcut
+rails s
+```
+
+
+
+&#169; 2020 Gone With The Win
