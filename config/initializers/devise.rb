@@ -269,7 +269,7 @@ Devise.setup do |config|
   config.sign_out_via = :delete
 
   config.omniauth :facebook, ENV['FB1'], ENV['FB2'],
-  callback_url: "http://localhost:3000/users/auth/facebook/callback"
+  callback_url: "https://flat-splitter.herokuapp.com/users/auth/facebook/callback"
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
