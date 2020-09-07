@@ -12,12 +12,12 @@
           <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %>
       </div>
-      <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "input" %>
+      <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "input-width" %>
     </div>
 
     <div class="input-group">
       <%= f.label :password_confirmation, "Confirm new password", class: "label" %>
-      <%= f.password_field :password_confirmation, autocomplete: "off", class: "input" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "input-width" %>
     </div>
 
     <div class="input-group">

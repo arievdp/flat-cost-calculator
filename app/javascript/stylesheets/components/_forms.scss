@@ -1,12 +1,24 @@
 %focus-style {
-  @apply shadow outline-none border-gray-500;
+  // @apply shadow outline-none border-gray-500;
 
-  box-shadow: 0 0 0 0.2rem theme("colors.gray.200");
+  // box-shadow: 0 0 0 0.2rem theme("colors.gray.200");
   background-clip: padding-box;
 }
 
-.input {
+// .input {
+//   @apply appearance-none block w-full text-gray-700 border border-gray-400 rounded px-3 leading-tight bg-white shadow-inner;
+//   padding-top: .65rem;
+//   padding-bottom: .65rem;
+// }
+
+.input-field {
   @apply appearance-none block w-full text-gray-700 border border-gray-400 rounded px-3 leading-tight bg-white shadow-inner;
+  padding-top: .65rem;
+  padding-bottom: .65rem;
+}
+
+.input-width {
+  @apply appearance-none text-gray-700 block w-full border border-gray-400 rounded px-3 leading-tight bg-white shadow-inner;
   padding-top: .65rem;
   padding-bottom: .65rem;
 }
