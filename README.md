@@ -6,6 +6,7 @@ url: https://flat-splitter.herokuapp.com/
 
 Flat Splitter uses:
 - Ruby on Rails
+- Javascript
 - Tailwind CSS
 - Devise for authentication
 - Omniauth for social logins
