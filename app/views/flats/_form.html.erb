@@ -4,10 +4,10 @@
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Create a new Flat</h1>
     </div>
     <div class="input-group">
-      <%= f.input :title, input_html: { class: "input" }, label_html: {class: 'label'} %>
+      <%= f.input :title, input_html: { class: "input-field" }, label_html: {class: 'label'} %>
     </div>
     <div class="input-group">
-      <%= f.input :address, input_html: { class: "input" }, label_html: {class: 'label'}  %>
+      <%= f.input :address, input_html: { class: "input-field" }, label_html: {class: 'label'}  %>
     </div>
     <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
     <div class="input-group">

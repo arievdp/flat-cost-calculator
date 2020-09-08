@@ -4,10 +4,10 @@
     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Transaction</h1>
   </div>
   <div class="input-group">
-    <%= f.input :title, input_html: { class: "input" }, label_html: {class: 'label'} %>
+    <%= f.input :title, input_html: { class: "input-field" }, label_html: {class: 'label'} %>
   </div>
   <div class="input-group">
-    <%= f.input :amount, input_html: { class: "input" }, label_html: {class: 'label'} %>
+    <%= f.input :amount, input_html: { class: "input-field" }, label_html: {class: 'label'} %>
   </div>
   <%= f.input :flat_id, as: :hidden, input_html: { value: params[:flat_id] } %>
   <div class="input-group">
@@ -15,5 +15,3 @@
   </div>
 <% end %>
 </div>
-
-
