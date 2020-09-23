@@ -1,6 +1,6 @@
 # Flat Splitter
 
-A personal project (work in progress) that splits housing costs between flatmates. I built this over a weekend to experiment with Tailwind CSS and social link sharing.
+A personal project (work in progress) that splits housing costs between flatmates. I built this over a weekend to experiment with Tailwind CSS, link sharing and social logins (OmniAuth)
 
 url: https://flat-splitter.herokuapp.com/
 
@@ -9,7 +9,7 @@ Flat Splitter uses:
 - Javascript
 - Tailwind CSS
 - Devise for authentication
-- Omniauth for social logins
+- OmniAuth for social logins
 
 ## Installation
 This app needs Ruby version 2.6.6 on your computer. If you need help with installing Ruby using `rbenv`, you can follow this [guide](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04#step-1-%E2%80%93-install-rbenv-and-dependencies).
